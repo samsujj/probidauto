@@ -9,6 +9,11 @@ import {Splashscreen} from 'ionic-native';
 })
 export class HomePage {
 
+  mySlideOptions = {
+    initialSlide: 0,
+    pager : true
+  };
+
   constructor(public navCtrl: NavController) {
 
   }

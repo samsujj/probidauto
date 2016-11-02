@@ -1,17 +1,59 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding fullscreen>
+  <!--<ion-slides [options]="mySlideOptions">
+    <ion-slide>
+      <img src="assets/images/slider-1.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-2.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-3.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-4.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-5.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-6.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slider-7.jpg">
+    </ion-slide>
+  </ion-slides>-->
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="main-wrapper home-page">
+    <div class="slides-wrapper">
+      <ion-slides [options]="mySlideOptions">
+        <ion-slide>
+          <div class="slides-area">
+            <img class="main-img" src="assets/images/slide-image-1.png">
+            <p>Buying Autos From a Dealership will never be the same. Join ypur dealer at live-auctionOWn your vehicleof choice -Instantly! Choose from thousands of vehicle of choice.
+            </p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slides-area">
+            <img class="logo-img" src="assets/images/slider-logo.png">
+            <img class="main-img2" src="assets/images/slide-image-2.png">
+            <h2>Manage Your Preferences</h2>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+
+
+
+    <div class="footer">
+
+      <div class="btnarea">
+        <button class="btn">LOG IN</button>
+        <button class="btn">SIGN UP</button>
+      </div>
+    </div>
+  </div>
+
+
 </ion-content>
