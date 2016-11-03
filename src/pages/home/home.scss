@@ -5,6 +5,7 @@
 .scroll-content{
   padding: 0 !important;
 }
+
 .main-tabs .tabbar{display: none !important;}
 
 
@@ -16,6 +17,15 @@
   .slides-wrapper{
     padding: 10px 0;
     height: 75%;
+
+
+    @media all and (orientation:landscape) {
+      width: 60%;
+      height: 100%;
+      float: left;
+    }
+
+
     .slides-area{
       .logo-img{
         width:45%;
@@ -29,9 +39,13 @@
         display: block;
       }
       .main-img2{
-        width:50%;
+        width:45%;
         margin: 0 auto;
         display: block;
+
+        @media all and (orientation:landscape) {
+          width:35%;
+        }
       }
       p{
         color: #ffffff;
@@ -47,12 +61,21 @@
         @media(min-width:700px) {
           font-size:28px;
         }
+
+        @media all and (orientation:landscape) {
+          font-size: 15px;
+        }
+
       }
 
       h2{
         color: #ffffff;
         text-transform: uppercase;
         font-size:1.5em;
+
+        @media all and (orientation:landscape) {
+          font-size: 1.5em;
+        }
       }
     }
   }
@@ -62,6 +85,12 @@
     height: 25%;
     width: 100%;
     display: table;
+    @media all and (orientation:landscape) {
+      width: 40%;
+      height: 100%;
+      float: left;
+    }
+
     .btnarea{
       width :100%;
       display: table-cell;
