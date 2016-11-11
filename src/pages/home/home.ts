@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import {Splashscreen} from 'ionic-native';
+import {LoginPage} from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -13,6 +14,8 @@ export class HomePage {
     initialSlide: 0,
     pager : true
   };
+
+  public loginpage = LoginPage;
 
   constructor(public navCtrl: NavController) {
 

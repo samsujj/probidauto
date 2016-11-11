@@ -1,0 +1,202 @@
+ion-header{
+  background: #272727;
+  text-align: center;
+
+
+  button{
+    float: left;
+    background: none;
+    margin-left: 2%;
+
+    ion-icon{
+      font-size:40px;
+      color: #979596;
+    }
+  }
+
+  .right-btn{
+    float: right;
+    margin-right: 3%;
+  }
+
+  ion-title{
+    text-align: center;
+    display: inline-block;
+    .toolbar-title{
+      color: #ffffff;
+      font-size: 25px;
+      line-height: 39px;
+    }
+  }
+
+}
+
+
+page-dashboard{
+  background: #303030;
+
+  .content-md {
+    background: #303030;
+
+    .main-wrapper{
+      font-family: Arial;
+      .block1{
+        background: #FB4C34;
+        padding: 20px 10px;
+
+
+        .logo-area{
+          width: 55%;
+          margin: 0 auto;
+        }
+
+        .user-area{
+          width: 300px;
+          margin: 20px auto;
+          text-align: center;
+          position: relative;
+
+          @media(max-width:340px) {
+            width: 260px;
+          }
+
+          .dealer-logo{
+            width:150px; display: block; margin: 0 auto;
+
+            @media(max-width:340px) {
+              width: 130px;
+            }
+
+          }
+
+          .cresentshape{ display: block; width: 100%; margin: 0 auto; margin-top: -40px;}
+
+          .user-profile-img{ width: 84px; height: 84px; border-radius: 100px; overflow: hidden;  position: absolute;
+            top: 144px;
+            left: 108px;
+
+
+            @media(max-width:340px) {
+              top: 112px;
+              left: 90px;
+            }
+
+            img{ width: 100%;  border-radius: 100px; border: solid 4px #fff; }
+
+             }
+
+
+          .locationicon{ width: 50px; position: absolute; left: 0px; bottom: 47px; opacity: 10!important;
+            @media(max-width:340px) {
+              bottom: 20px;
+              left: 10px;
+            }
+
+          }
+
+          .profileicon{ width: 50px; position: absolute; left: 125px; bottom: -24px; opacity: 10!important;
+
+            @media(max-width:340px) {
+              bottom: -18px;
+              left: 105px;
+            }
+
+          }
+
+          .contacticon{
+            bottom: 47px;
+            right: 0;
+            position: absolute;
+            width: 50px;
+            opacity: 10!important;
+
+
+            @media(max-width:340px) {
+              bottom: 20px;
+              right: 10px;
+            }
+
+          }
+
+          /*.fab-contacticon{
+            bottom: 47px;
+            right: 0;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 10!important;
+            background: url("../assets/images/contacticon.png");
+            background-size: cover;
+
+
+            @media(max-width:340px) {
+              bottom: 20px;
+              right: 10px;
+            }
+
+
+
+            .fab{
+              padding: 0;
+              margin: 0;
+              width: 100%;
+              height: 100%;
+              background: none;
+            }
+
+            .fab-close-active{
+              background: none;
+
+              ion-icon{
+                display: none !important;
+              }
+            }
+
+            .contact-fablist{
+              background: rgba(0,0,0,.6);
+              color: #ffffff;
+            }
+
+
+
+          }*/
+
+
+
+        }
+
+      }
+
+      .block2{
+        background: #303030;
+        padding: 20px 10%;
+        text-align: center;
+
+        a{
+          display: inline-table;
+          width: 26%;
+          margin: 2%;
+          max-width: 75px;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          img{
+            width: 75px;
+          }
+
+        }
+
+        a:hover{
+          color:#ffffff;
+        }
+
+      }
+
+    }
+
+
+  }
+}

@@ -5,6 +5,12 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { FinancingPage } from '../pages/financing/financing';
+import { PopoverLocationPage } from '../pages/popoverlocation/popoverlocation';
+import { PopoverProfilePage } from '../pages/popoverprofile/popoverprofile';
+import { PopoverConatctPage } from '../pages/popovercontact/popovercontact';
 
 @NgModule({
   declarations: [
@@ -12,7 +18,13 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    DashboardPage,
+    FinancingPage,
+    PopoverConatctPage,
+    PopoverProfilePage,
+    PopoverLocationPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -23,7 +35,13 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    DashboardPage,
+    FinancingPage,
+    PopoverConatctPage,
+    PopoverProfilePage,
+    PopoverLocationPage
   ],
   providers: []
 })

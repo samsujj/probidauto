@@ -1,0 +1,172 @@
+ion-header{
+  background: #272727;
+  text-align: center;
+
+
+  button{
+    float: left;
+    background: none;
+    margin-left: 2%;
+
+    ion-icon{
+      font-size:40px;
+      color: #979596;
+    }
+  }
+
+  .right-btn{
+    float: right;
+    margin-right: 3%;
+  }
+
+  ion-title{
+    text-align: center;
+    display: inline-block;
+    .toolbar-title{
+      color: #ffffff;
+      font-size: 25px;
+      line-height: 39px;
+    }
+  }
+
+}
+
+
+page-dashboard{
+  background: #FB4C34;
+
+  .content-md {
+    background: #FB4C34;
+
+    .main-wrapper{
+      font-family: Arial;
+      .block1{
+        padding: 20px 10px;
+
+
+        .logo-area{
+          width: 65%;
+          margin: 0 auto;
+        }
+
+        h1{
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size:20px;
+          text-align: center;
+          font-weight: bold; margin-bottom: 0px; padding-bottom: 0px;
+
+          @media(min-width:500px) {
+            font-size:24px;
+          }
+
+          @media(min-width:640px) {
+            font-size:28px;
+          }
+
+          @media(min-width:750px) {
+            font-size:32px;
+          }
+
+          @media(min-width:900px) {
+            font-size:35px;
+          }
+
+
+        }
+
+      }
+
+      .block2{
+        background: #303030;
+        padding: 20px;
+
+        .block-divider{
+
+
+          background: rgba(48,48,48,1);
+          background: -moz-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(181,181,181,1) 51%, rgba(48,48,48,1) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(48,48,48,1)), color-stop(51%, rgba(181,181,181,1)), color-stop(100%, rgba(48,48,48,1)));
+          background: -webkit-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(181,181,181,1) 51%, rgba(48,48,48,1) 100%);
+          background: -o-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(181,181,181,1) 51%, rgba(48,48,48,1) 100%);
+          background: -ms-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(181,181,181,1) 51%, rgba(48,48,48,1) 100%);
+          background: linear-gradient(to right, rgba(48,48,48,1) 0%, rgba(181,181,181,1) 51%, rgba(48,48,48,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#303030', GradientType=1 );
+
+
+          width: 100%;
+          height: 1px; margin-top: 20px;
+        }
+
+        .sub-block1{
+          color: #ffffff;
+
+          h2{
+            text-align: center;
+          }
+
+          .h2-last{
+            margin-top: 0;
+          }
+        }
+
+        .sub-block2{
+          color: #ffffff;
+          text-align: center;
+
+          span{
+            background: #6B849D;
+            font-size: 2.4rem;
+            padding: 10px;
+            display: inline-block;
+            margin-top: 9px; margin-bottom: 20px;
+
+            @media(min-width:370px) {
+              padding: 10px 30px;
+            }
+
+          }
+
+        }
+
+      }
+
+      .block3{
+        padding:0 27px;
+
+        .btn2{  border: 3px solid #FF674E; box-shadow: 0 0 4px #FF674E;
+
+          background: rgba(51,51,51,1);
+          background: -moz-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(24,24,24,1) 100%);
+          background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(51,51,51,1)), color-stop(100%, rgba(24,24,24,1)));
+          background: -webkit-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(24,24,24,1) 100%);
+          background: -o-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(24,24,24,1) 100%);
+          background: -ms-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(24,24,24,1) 100%);
+          background: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(24,24,24,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#181818', GradientType=0 );
+
+
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 30px;
+          float: left;
+          margin: 40px 0;
+          padding: 10px 25px;
+          border-radius: 25px;
+
+        }
+
+        .btn2:last-child{
+          float: right;
+        }
+
+
+
+      }
+
+    }
+
+
+  }
+}
