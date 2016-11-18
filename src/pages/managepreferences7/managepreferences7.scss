@@ -1,0 +1,83 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+page-managepreferences7{
+  background: #fb4a32;
+
+  .content-md {
+    background: #fb4a32;
+	
+   .clearfix{ clear:both;}
+
+  .logo-area{
+   width: 55%;
+   margin: 20px auto; margin-top:20px;
+   
+      img{ width:100%;}
+ }
+	
+	
+ .preferences_text1{ padding:25px 25px 36px 25px;
+
+   h2{ margin:0; padding:10px; font-family: 'Open Sans'; font-size:30px; color:#fff; text-transform:uppercase; line-height:42px; text-align:center; font-weight: 700; }
+   .preferences_chakebox1{ width:200px; margin:0 auto; margin-top:20px;
+
+    .mr_chakebox{ width: 80px; margin: 0 10px;  float: left;
+       input{ width: 20px; float: left; margin-top: 8px;}
+      label{ display:block; text-align: left; padding-left: 5px; width: 50px; float: left;  font-family: 'Open Sans'; font-size: 22px; color: #151515;   font-weight:600;}
+
+
+
+    }
+
+
+   }
+
+  }	
+	
+ .preferences_text2{ background: #151515; padding:20px;
+   h3{ margin:0; padding:0 10px; font-family: 'Open Sans'; font-size:24px; color:#fff; text-transform:uppercase; line-height:40px; text-align:center; }
+   .preferences_chakebox2{ width:170px; margin:22px auto; margin-top:18px;
+
+     .mr_chakebox{ width: 60px; margin: 0 10px;  float: left;
+       input{ width: 20px; float: left; margin-top: 5px;}
+       label{ display:block; text-align: left; padding-left: 5px; width: 40px; float: left;  font-family: 'Open Sans'; font-size: 20px; color: #FB4A32;   font-weight:500;}
+
+
+
+     }
+
+
+   }
+ }	
+	
+	
+ .preferences_btngroup{  padding:20px;
+ 
+   .grbtn1{ float:left; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #2f2f2f 0%, #111111 100%) repeat scroll 0 0;
+     border-radius: 30px;
+     color: #fff;
+     display: block;
+     font-size:22px;
+     font-weight: 800; line-height: 60px; text-transform: uppercase;
+
+     margin: 0;
+     width: 110px;}
+
+   .grbtn2{ float:right;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #2f2f2f 0%, #111111 100%) repeat scroll 0 0;
+     border-radius: 30px;
+     color: #fff;
+     display: block;
+     font-size:22px;
+     font-weight: 800; line-height: 60px; text-transform: uppercase;
+
+     margin: 0;
+     width: 110px;}
+ 
+ 
+ }
+
+
+
+
+  }
+}

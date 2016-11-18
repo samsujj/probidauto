@@ -11,6 +11,24 @@ import { FinancingPage } from '../pages/financing/financing';
 import { PopoverLocationPage } from '../pages/popoverlocation/popoverlocation';
 import { PopoverProfilePage } from '../pages/popoverprofile/popoverprofile';
 import { PopoverConatctPage } from '../pages/popovercontact/popovercontact';
+import { VisitDealerPage } from '../pages/visitdealer/visitdealer';
+import { UpcomeInventoryPage } from '../pages/upcomeinventory/upcomeinventory';
+import { SetAlertsPage } from '../pages/setalerts/setalerts';
+import { OnGoingauctionPage } from '../pages/ongoingauction/ongoingauction';
+import { MessageDealerPage } from '../pages/messagedealer/messagedealer';
+import { ManagePreferencesPage } from '../pages/managepreferences/managepreferences';
+import { InventoryMatchPage } from '../pages/inventorymatch/inventorymatch';
+import { InventoryDetailsPage } from '../pages/inventorydetails/inventorydetails';
+import { ManagePreferences2Page } from '../pages/managepreferences2/managepreferences2';
+import { ManagePreferences3Page } from '../pages/managepreferences3/managepreferences3';
+import { ManagePreferences4Page } from '../pages/managepreferences4/managepreferences4';
+import { ManagePreferences5Page } from '../pages/managepreferences5/managepreferences5';
+import { ManagePreferences6Page } from '../pages/managepreferences6/managepreferences6';
+import { ManagePreferences7Page } from '../pages/managepreferences7/managepreferences7';
+import { ManagePreferences8Page } from '../pages/managepreferences8/managepreferences8';
+import { ManagePreferences9Page } from '../pages/managepreferences9/managepreferences9';
+import { ManagePreferences10Page } from '../pages/managepreferences10/managepreferences10';
+import { ManagePreferences11Page } from '../pages/managepreferences11/managepreferences11';
 
 @NgModule({
   declarations: [
@@ -24,7 +42,25 @@ import { PopoverConatctPage } from '../pages/popovercontact/popovercontact';
     FinancingPage,
     PopoverConatctPage,
     PopoverProfilePage,
-    PopoverLocationPage
+    PopoverLocationPage,
+    VisitDealerPage,
+    SetAlertsPage,
+    OnGoingauctionPage,
+    MessageDealerPage,
+    ManagePreferencesPage,
+    InventoryMatchPage,
+    UpcomeInventoryPage,
+    InventoryDetailsPage,
+    ManagePreferences2Page,
+    ManagePreferences3Page,
+    ManagePreferences4Page,
+    ManagePreferences5Page,
+    ManagePreferences6Page,
+    ManagePreferences7Page,
+    ManagePreferences8Page,
+    ManagePreferences9Page,
+    ManagePreferences10Page,
+    ManagePreferences11Page
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,7 +77,25 @@ import { PopoverConatctPage } from '../pages/popovercontact/popovercontact';
     FinancingPage,
     PopoverConatctPage,
     PopoverProfilePage,
-    PopoverLocationPage
+    PopoverLocationPage,
+    VisitDealerPage,
+    SetAlertsPage,
+    OnGoingauctionPage,
+    MessageDealerPage,
+    ManagePreferencesPage,
+    InventoryMatchPage,
+    UpcomeInventoryPage,
+    InventoryDetailsPage,
+    ManagePreferences2Page,
+    ManagePreferences3Page,
+    ManagePreferences4Page,
+    ManagePreferences5Page,
+    ManagePreferences6Page,
+    ManagePreferences7Page,
+    ManagePreferences8Page,
+    ManagePreferences9Page,
+    ManagePreferences10Page,
+    ManagePreferences11Page
   ],
   providers: []
 })

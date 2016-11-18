@@ -3,6 +3,13 @@ import { NavController,ToastController,PopoverController } from 'ionic-angular';
 import {PopoverLocationPage} from '../popoverlocation/popoverlocation';
 import {PopoverProfilePage} from '../popoverprofile/popoverprofile';
 import {PopoverConatctPage} from '../popovercontact/popovercontact';
+import {VisitDealerPage} from '../visitdealer/visitdealer';
+import {UpcomeInventoryPage} from '../upcomeinventory/upcomeinventory';
+import {SetAlertsPage} from '../setalerts/setalerts';
+import {OnGoingauctionPage} from '../ongoingauction/ongoingauction';
+import {MessageDealerPage} from '../messagedealer/messagedealer';
+import {ManagePreferencesPage} from '../managepreferences/managepreferences';
+import {InventoryMatchPage} from '../inventorymatch/inventorymatch';
 
 
 @Component({
@@ -15,6 +22,14 @@ export class DashboardPage {
     initialSlide: 0,
     pager : true
   };
+
+  public visitdealerpage = VisitDealerPage;
+  public upcomeinventorypage = UpcomeInventoryPage;
+  public setalertspage = SetAlertsPage;
+  public ongoingauctionpage = OnGoingauctionPage;
+  public messagedealerpage = MessageDealerPage;
+  public managepreferencespage = ManagePreferencesPage;
+  public inventorymatchpage = InventoryMatchPage;
 
   constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController) {
 
