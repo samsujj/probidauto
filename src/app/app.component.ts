@@ -5,6 +5,8 @@ import { StatusBar } from 'ionic-native';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { InventoryMatchPage } from '../pages/inventorymatch/inventorymatch';
+import { ManagePreferencesPage } from '../pages/managepreferences/managepreferences';
 
 
 @Component({
@@ -33,10 +35,8 @@ export class MyApp {
 
     this.pageList = [
       {title: 'Home', class : DashboardPage},
-      {title: 'Page 2', class : 'Page2'},
-      {title: 'Page 3', class : 'Page3'},
-      {title: 'Page 4', class : 'Page4'},
-      {title: 'Page 5', class : 'Page5'}
+      {title: 'Inventory Match', class : InventoryMatchPage},
+      {title: 'Manage Prefernces', class : ManagePreferencesPage}
     ];
 
   }

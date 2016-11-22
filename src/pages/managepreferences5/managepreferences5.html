@@ -16,43 +16,68 @@
      </div>
      
      <div class="preferences_text1">
-        <h2>Can we send you text and email alerts 
-when we find you a match? </h2>
+        <h2>Mileage</h2>
 
-      <div class="preferences_chakebox1">
-
-
-         <div class="mr_chakebox"> <input type="radio"> <label>Yes</label>    <div class="clearfix"></div></div>
-
-          <div class="mr_chakebox">  <input type="radio"> <label>No</label>    <div class="clearfix"></div></div>
-  
-       <div class="clearfix"></div>
-  
-      </div>
+      
       
       
      </div>
      
-     <div class="preferences_text2">
-       <h3>Would you like to use the smart retail calculator during your window of  engagement?  </h3>
+     <div class="preferences_text3">
        
-         <div class="preferences_chakebox2">
-             <div class="mr_chakebox"> <input type="radio"> <label>Yes</label></div>
+       
+         <div class="preferences_chakebox6">
+             <div class="mr_chakebox2"> <input type="radio" name="mileage"> <label>Any Mileage   </label>
+                 <div class="clearfix"></div>
 
-             <div class="mr_chakebox">  <input type="radio"> <label>No</label></div>
+             </div>
+
+             <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 15,000   </label>
+                 <div class="clearfix"></div>
+
+             </div>
+              <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 30,000 </label>
+                  <div class="clearfix"></div>
+              </div>
+               <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 45,000   </label>
+                   <div class="clearfix"></div>
+
+               </div>
+                <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 60,000    </label>
+                    <div class="clearfix"></div>
+                </div>
+                 <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 75,000</label>
+                     <div class="clearfix"></div>
+                 </div>
+                   <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 100,000 </label>
+
+                       <div class="clearfix"></div>
+                   </div>
+                    <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 150,000  </label>
+                        <div class="clearfix"></div>
+                    </div>
+                      <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 200,000 </label>
+                          <div class="clearfix"></div>
+                      </div>
+                       <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Over 200,000</label>
+
+                           <div class="clearfix"></div>
+                       </div>
+             
   
        <div class="clearfix"></div>
   
       </div>
      </div>
-     
-     
-     <div class="preferences_btngroup">
-      <button class="grbtn1">Skip</button>
-       <button class="grbtn2">Next</button>
-      <div class="clearfix"></div>
-     
-     </div>
+
+
+      <div class="preferences_btngroup">
+
+          <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
+          <div class="clearfix"></div>
+      </div>
 
   </div>
 
