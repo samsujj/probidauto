@@ -11,6 +11,8 @@ import {MessageDealerPage} from '../messagedealer/messagedealer';
 import {ManagePreferencesPage} from '../managepreferences/managepreferences';
 import {InventoryMatchPage} from '../inventorymatch/inventorymatch';
 
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'page-dashboard',
@@ -23,6 +25,9 @@ export class DashboardPage {
     pager : true
   };
 
+  public stvalue;
+
+
   public visitdealerpage = VisitDealerPage;
   public upcomeinventorypage = UpcomeInventoryPage;
   public setalertspage = SetAlertsPage;
@@ -31,7 +36,14 @@ export class DashboardPage {
   public managepreferencespage = ManagePreferencesPage;
   public inventorymatchpage = InventoryMatchPage;
 
-  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController) {
+  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController, public storage: Storage) {
+
+    this.storage.get('name').then((name) => {
+      this.stvalue = 'null';
+      if(name!=null) {
+        this.stvalue = name;
+      }
+    });
 
   }
 

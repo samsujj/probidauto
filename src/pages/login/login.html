@@ -11,7 +11,7 @@
         <h2>Login</h2>
         <form [formGroup]="loginForm" (ngSubmit)="formsubmit(loginForm.value)">
           <div class="form-group">
-            <input [formControl]="loginForm.controls['email']" type="text" placeholder="Email" class="form-input">
+            <input [formControl]="loginForm.controls['username']" type="text" placeholder="Username" class="form-input">
           </div>
           <div class="form-group">
             <input [formControl]="loginForm.controls['password']" type="password" placeholder="Password" class="form-input">
