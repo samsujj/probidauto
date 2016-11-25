@@ -61,27 +61,32 @@ page-dashboard{
           }
 
           .dealer-logo{
-            width:150px; display: block; margin: 0 auto;
+            width:100%!important;  position: absolute; left: 0;
+            top:-20px;
+
+
+              img{ width: 140px;  display: block;
+                margin: 0 auto;}
 
             @media(max-width:340px) {
-              width: 130px;
+              width: 100px;
             }
 
           }
 
-          .cresentshape{ display: block; width: 100%; margin: 0 auto; margin-top: -40px;}
+          .cresentshape{ display: block; width: 100%; margin: 0 auto; margin-top: 50px;}
 
           .user-profile-img{ width: 84px; height: 84px; border-radius: 100px; overflow: hidden;  position: absolute;
-            top: 144px;
+            top: 95px;
             left: 108px;
 
 
             @media(max-width:340px) {
-              top: 112px;
+              top: 80px;
               left: 90px;
             }
 
-            img{ width: 100%;  border-radius: 100px; border: solid 4px #fff; }
+            img{  min-height: 100%;  border-radius: 100px; border: solid 4px #fff; }
 
              }
 

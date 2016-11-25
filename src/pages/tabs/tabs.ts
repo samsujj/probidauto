@@ -14,7 +14,6 @@ export class TabsPage {
   tab2Root: any = AboutPage;
   tab3Root: any = ContactPage;
 
-  constructor() {
-
+  constructor( ) {
   }
 }

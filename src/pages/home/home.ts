@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-
+import { Storage } from '@ionic/storage';
 import { NavController } from 'ionic-angular';
 import {Splashscreen} from 'ionic-native';
 import {LoginPage} from '../login/login';
+import {DashboardPage} from '../dashboard/dashboard';
 
-import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -23,10 +23,9 @@ export class HomePage {
   public loginpage = LoginPage;
 
   constructor(public navCtrl: NavController, public storage: Storage) {
-    this.storage.get('name').then((name) => {
-      this.stvalue = 'null';
-      if(name!=null) {
-        this.stvalue = name;
+    this.storage.get('userdetails').then((value) => {
+      if(value!=null) {
+        this.navCtrl.push(DashboardPage);
       }
     });
   }

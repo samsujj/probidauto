@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import {HomePage} from '../home/home';
 
 @Component({
@@ -7,12 +8,12 @@ import {HomePage} from '../home/home';
   templateUrl: 'logout.html'
 })
 export class LogOutPage {
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public storage: Storage) {
 
   }
 
   ngOnInit(){
-    console.log('Logout');
+    this.storage.remove('userdetails');
     this.navCtrl.push(HomePage);
   }
 

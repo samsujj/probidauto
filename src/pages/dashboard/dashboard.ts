@@ -10,8 +10,10 @@ import {OnGoingauctionPage} from '../ongoingauction/ongoingauction';
 import {MessageDealerPage} from '../messagedealer/messagedealer';
 import {ManagePreferencesPage} from '../managepreferences/managepreferences';
 import {InventoryMatchPage} from '../inventorymatch/inventorymatch';
+import {BlankPage} from '../blank/blank';
 
 import { Storage } from '@ionic/storage';
+import {Http} from "@angular/http";
 
 
 @Component({
@@ -25,8 +27,11 @@ export class DashboardPage {
     pager : true
   };
 
-  public stvalue;
+  public userdetails;
+  public userid;
+  public dealerusername;
 
+  public dealerdetails;
 
   public visitdealerpage = VisitDealerPage;
   public upcomeinventorypage = UpcomeInventoryPage;
@@ -36,34 +41,67 @@ export class DashboardPage {
   public managepreferencespage = ManagePreferencesPage;
   public inventorymatchpage = InventoryMatchPage;
 
-  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController, public storage: Storage) {
+  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController, public storage: Storage,private _http: Http) {
 
-    this.storage.get('name').then((name) => {
-      this.stvalue = 'null';
-      if(name!=null) {
-        this.stvalue = name;
+
+
+    this.storage.get('userdetails').then((value) => {
+      if(value!=null) {
+        this.userdetails = value;
+        this.userid = value._id;
+        this.dealerusername = value.dealerusername;
+        console.log(this.userdetails);
+        this.getDealerDetails();
+      }else{
+        this.navCtrl.push(BlankPage);
       }
     });
 
   }
 
   showContact(){
-    let popover = this.popoverCtrl.create(PopoverConatctPage);
+    let popover = this.popoverCtrl.create(PopoverConatctPage,{dealerdetails: this.dealerdetails});
 
     popover.present();
 
   }
   showProfile(){
-    let popover = this.popoverCtrl.create(PopoverProfilePage);
+    let popover = this.popoverCtrl.create(PopoverProfilePage,{dealerdetails: this.dealerdetails});
 
     popover.present();
 
   }
   showLocation(){
-    let popover = this.popoverCtrl.create(PopoverLocationPage);
+    let popover = this.popoverCtrl.create(PopoverLocationPage,{dealerdetails: this.dealerdetails});
 
     popover.present();
 
+  }
+
+  getDealerDetails(){
+
+    console.log(this.dealerusername);
+
+    var link = 'http://influxiq.com:8001/editdealerbyusername';
+    var data = {'username':this.dealerusername};
+
+    this._http.post(link, data)
+        .subscribe(data => {
+
+          let data2 = data.json();
+
+          this.dealerdetails = data2[0];
+
+          console.log(this.dealerdetails);
+
+        }, error => {
+          console.log('error');
+          let toast = this.toastCtrl.create({
+            message: 'Database error occurred. Try again!',
+            duration: 2000
+          });
+          toast.present();
+        });
   }
 
 
