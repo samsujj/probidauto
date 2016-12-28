@@ -1,0 +1,73 @@
+<ion-header class="login-header ">
+  <button menuToggle="left">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Financing</ion-title>
+  <button class="right-btn">
+    <ion-icon name="more"></ion-icon>
+  </button>
+</ion-header>
+
+<ion-content>
+    <div class="main-wrapper">
+        <div class="block1">
+            <div class="logo-area">
+                <img src="assets/images/slider-logo.png">
+            </div>
+
+
+            <h1>Previous  Employment <input type="checkbox"> </h1>
+
+
+
+
+        </div>
+
+
+
+        <div class="block2">
+
+
+            <input type="text" placeholder="Employer" class="formbox">
+
+
+            <label> How long Employed by this Employer?</label>
+            <input type="text" placeholder="Years" class="formbox4">
+            <input type="text" placeholder="Months " class="formbox4">
+
+            <div class="clearfix"></div>
+
+
+
+            <textarea placeholder="Address Line1" class="formbox2"></textarea>
+            <textarea placeholder="Address Line2" class="formbox2"></textarea>
+
+            <input type="text" placeholder="City" class="formbox">
+
+
+            <select class="formbox3">
+                <option>State</option>
+                <option>State</option>
+                <option>State</option>
+
+            </select>
+
+            <input type="text" placeholder="Postal Code" class="formbox">
+
+        </div>
+
+
+
+
+        <div class="preferences_btngroup">
+
+            <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
+            <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
+            <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+
+
+</ion-content>

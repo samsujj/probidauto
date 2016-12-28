@@ -8,6 +8,9 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { LogOutPage } from '../pages/logout/logout';
 import { InventoryMatchPage } from '../pages/inventorymatch/inventorymatch';
 import { ManagePreferencesPage } from '../pages/managepreferences/managepreferences';
+import { FinancingPage } from '../pages/financing/financing';
+import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
+import { MessageDealerPage } from '../pages/messagedealer/messagedealer';
 
 
 @Component({
@@ -37,7 +40,10 @@ export class MyApp {
     this.pageList = [
       {title: 'Home', class : DashboardPage},
       {title: 'Inventory Match', class : InventoryMatchPage},
+      {title: 'Message Your Dealer', class : MessageDealerPage},
+      {title: 'Recent RSVP', class : RecentRsvpPage},
       {title: 'Manage Prefernces', class : ManagePreferencesPage},
+      {title: 'Financing', class : FinancingPage},
       {title: 'Log Out', class : LogOutPage}
     ];
 

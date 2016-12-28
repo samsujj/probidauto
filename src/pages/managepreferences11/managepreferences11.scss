@@ -124,5 +124,24 @@ page-managepreferences11{
 
     }
 
+
+    .managepreference_bottomblock{ border-bottom: solid 1px #000; padding: 10px; margin-bottom: 10px; }
+
+    .managepreference_bottomblock h2{ font-family: 'Open Sans'; font-size: 22px; color: #fff; text-transform: uppercase; margin: 0; padding:0; text-align: center; font-weight: 700;}
+
+
+    .managepreference_bottom_wrapper{ width: 250px; margin: 0 auto; margin-top: 15px; font-family: 'Open Sans'; font-size: 22px; }
+
+
+    .managepreference_div{ width: 105px; margin: 0 10px;  float: left;
+
+     input{ float: left;
+       margin: 6px 0 0;
+       width: 35px;}
+
+      span{ width: 70px; float: left;  font-family: 'Open Sans'; font-size: 22px;  color: #fff;}
+
+    }
+
   }
 }

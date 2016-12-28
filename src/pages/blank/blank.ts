@@ -17,9 +17,10 @@ export class BlankPage {
 
   }
 
-  ngOnInit(){
+  ionViewDidEnter(){
     this.storage.get('userdetails').then((value) => {
       if(value!=null) {
+
         this.navCtrl.push(DashboardPage);
       }else{
         this.navCtrl.push(HomePage);

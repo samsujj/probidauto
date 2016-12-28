@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { NavController , ToastController} from 'ionic-angular';
 import {DashboardPage} from '../dashboard/dashboard';
-import {Http,Headers} from "@angular/http";
+import {Http} from "@angular/http";
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -36,15 +36,13 @@ export class LoginPage {
   formsubmit(formaval){
 
 
-
     if(this.loginForm.valid){
-        var headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+//        var headers = new Headers();
+//        headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        var link = 'http://influxiq.com:8001/customercheck';
-        var data = formaval;
+        var link = 'http://influxiq.com:8001/customercheckformobile?username='+formaval.username+'&password='+formaval.password;
 
-        this._http.post(link, data)
+        this._http.get(link)
             .subscribe(data => {
 
                 let data2 = data.json();

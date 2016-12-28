@@ -14,158 +14,540 @@
     <div class="logo-area">
         <img src="assets/images/slider-logo.png">
       </div>
-      
-         <div class="inventorymatch-detail-car-area">
-        <div class="detail_bigcar"><img src="assets/images/Inventory-detail_bigcar.png" ></div>
-        <div class="detail_smcar">
-        <ul>
-         <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
-         <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
-          <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
-           <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
-            <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
-                </ul>
-                  <div class="clearfix"></div>
-        
-        </div>
-        
-
-             <div class="inventorymatch_detail_formgroup">
-
-                     <ion-item>
-                         <ion-label>Want to participate?</ion-label>
-                         <ion-select [(ngModel)]="participate">
-                             <ion-option value="y" selected="true">Yes</ion-option>
-                             <ion-option value="n">No</ion-option>
-                         </ion-select>
-                     </ion-item>
-
-                     <div class="ion-setbox">
-                         <ion-label color="primary">Set your max bid</ion-label>
-                         <ion-input placeholder="Text Input"></ion-input>
-                         <button>Set</button>
-                     </div>
-                     
-                     <div class="ion-setbox-bottom">
-                      <h2>Suggested Max Bid $ 20,000 </h2>
-                     
-                     <img src="assets/images/inven_img2.jpg">
-                     
-                      <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
-                     </div>
 
 
-             </div>
 
+      <div class="page_slider_btnwrapper">
+
+
+
+          <a href="javascript:void(0)" class="prevbtn" (click)="prevSlide()" *ngIf="!isFirst"><img src="assets/images/prev-page.png"></a>
+
+          <a href="javascript:void(0)" class="nextbtn" (click)="nextSlide()" *ngIf="!isLast"><img src="assets/images/next-page.png"></a>
+
+          <div class="clearfix"></div>
 
       </div>
-      
-      
-    
-      
-      
-        <div class="inventorymatch-bottom-areadetail">
-        
-        
-        
-        <table border="0">
-  <tr>
-    <th align="left" valign="middle"><strong>Details</strong></th>
-    <th align="right" valign="middle">Glossary</th>
-  </tr>
-  
-  
-   <tr>
-    <td align="left" valign="middle">Doc Type </td>
-    <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
-  </tr>
-  
-  
-   <tr>
-    <td align="left" valign="middle">Odometer </td>
-    <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
-  </tr>
-  
-     <tr>
-    <td align="left" valign="middle">Highlights   </td>
-    <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
-  </tr>
-  
-    <tr>
-    <td align="left" valign="middle">Primary Damage   </td>
-    <td align="right" valign="middle"><label> SIDE</label></td>
-  </tr>
-  
-  
-   <tr>
-    <td align="left" valign="middle">Secondary Damage  </td>
-    <td align="right" valign="middle">&nbsp;</td>
-  </tr>
-  
-  <tr>
-    <td align="left" valign="middle">Est. Retail Value </td>
-    <td align="right" valign="middle">&nbsp;</td>
-  </tr>
-  
-      <tr>
-    <td align="left" valign="middle">VIN    </td>
-    <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
-  </tr>
-  
-     <tr>
-    <td align="left" valign="middle">Body Style    </td>
-    <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
-  </tr>
-  
-  
-       <tr>
-    <td align="left" valign="middle">Color   </td>
-    <td align="right" valign="middle"><label> TAN</label></td>
-  </tr>
-  
-  
-    <tr>
-    <td align="left" valign="middle">Engine Type   </td>
-    <td align="right" valign="middle"><label> 3.8L 6</label></td>
-  </tr>
-  
-  
-   <tr>
-    <td align="left" valign="middle">Drive   </td>
-    <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
-  </tr>
-  
-   <tr>
-    <td align="left" valign="middle">Cylinder   </td>
-    <td align="right" valign="middle"><label> 6</label></td>
-  </tr>
-  
-     <tr>
-    <td align="left" valign="middle">Fuel     </td>
-    <td align="right" valign="middle"><label> GAS</label></td>
-  </tr>
-  
-  
-       <tr>
-    <td align="left" valign="middle">Keys     </td>
-    <td align="right" valign="middle"><label> YES</label></td>
-  </tr>
-  
-    <tr>
-    <td align="left" valign="middle">Notes </td>
-    <td align="right" valign="middle">&nbsp;</td>
-  </tr>
-  
-</table>
 
 
-        
-       
-        
-        </div>
-      
-      
-      
+      <ion-slides #mySlider (ionDidChange)="onSlideChanged()">
+          <ion-slide>
+              <div class="inventorymatch-detail-car-area">
+
+                  <ion-slides [options]="mySlideOptions" class="imageSlides">
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+
+                  <!--  <div class="detail_smcar">
+                    <ul>
+                     <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
+                     <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
+                      <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
+                       <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
+                        <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
+                            </ul>
+                              <div class="clearfix"></div>
+
+                    </div>-->
+
+
+                  <div class="inventorymatch_detail_formgroup">
+
+                      <div class="progress">
+                          <div class="progress-bar progress-bar-striped active" role="progressbar"
+                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                              40%
+                          </div>
+                      </div>
+
+
+                      <!-- <ion-item>
+                           <ion-label>Want to participate?</ion-label>
+                           <ion-select [(ngModel)]="participate">
+                               <ion-option value="y" selected="true">Yes</ion-option>
+                               <ion-option value="n">No</ion-option>
+                           </ion-select>
+                       </ion-item>
+
+                       <div class="ion-setbox">
+                           <ion-label color="primary">Set your max bid</ion-label>
+                           <ion-input placeholder="Text Input"></ion-input>
+                           <button>Set</button>
+                       </div>
+
+                       <div class="ion-setbox-bottom">
+                        <h2>Suggested Max Bid $ 20,000 </h2>
+
+                       <img src="assets/images/inven_img2.jpg">
+
+                        <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
+                       </div>-->
+
+
+                  </div>
+
+
+              </div>
+              <div class="inventorymatch-bottom-areadetail">
+
+
+
+                  <table border="0">
+                      <tr>
+                          <th align="left" valign="middle"><strong>Details</strong></th>
+                          <th align="right" valign="middle">Glossary</th>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Doc Type </td>
+                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Odometer </td>
+                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Highlights   </td>
+                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
+                          <td align="right" valign="middle"><label> SIDE</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Secondary Damage  </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Est. Retail Value </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Body Style    </td>
+                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Color   </td>
+                          <td align="right" valign="middle"><label> TAN</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Drive   </td>
+                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Cylinder   </td>
+                          <td align="right" valign="middle"><label> 6</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Fuel     </td>
+                          <td align="right" valign="middle"><label> GAS</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Keys     </td>
+                          <td align="right" valign="middle"><label> YES</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Notes </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                  </table>
+
+
+
+
+
+              </div>
+          </ion-slide>
+          <ion-slide>
+              <div class="inventorymatch-detail-car-area">
+
+                  <ion-slides [options]="mySlideOptions" class="imageSlides">
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+
+                  <!--  <div class="detail_smcar">
+                    <ul>
+                     <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
+                     <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
+                      <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
+                       <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
+                        <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
+                            </ul>
+                              <div class="clearfix"></div>
+
+                    </div>-->
+
+
+                  <div class="inventorymatch_detail_formgroup">
+
+                      <div class="progress">
+                          <div class="progress-bar progress-bar-striped active" role="progressbar"
+                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                              40%
+                          </div>
+                      </div>
+
+
+                      <!-- <ion-item>
+                           <ion-label>Want to participate?</ion-label>
+                           <ion-select [(ngModel)]="participate">
+                               <ion-option value="y" selected="true">Yes</ion-option>
+                               <ion-option value="n">No</ion-option>
+                           </ion-select>
+                       </ion-item>
+
+                       <div class="ion-setbox">
+                           <ion-label color="primary">Set your max bid</ion-label>
+                           <ion-input placeholder="Text Input"></ion-input>
+                           <button>Set</button>
+                       </div>
+
+                       <div class="ion-setbox-bottom">
+                        <h2>Suggested Max Bid $ 20,000 </h2>
+
+                       <img src="assets/images/inven_img2.jpg">
+
+                        <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
+                       </div>-->
+
+
+                  </div>
+
+
+              </div>
+              <div class="inventorymatch-bottom-areadetail">
+
+
+
+                  <table border="0">
+                      <tr>
+                          <th align="left" valign="middle"><strong>Details</strong></th>
+                          <th align="right" valign="middle">Glossary</th>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Doc Type </td>
+                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Odometer </td>
+                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Highlights   </td>
+                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
+                          <td align="right" valign="middle"><label> SIDE</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Secondary Damage  </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Est. Retail Value </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Body Style    </td>
+                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Color   </td>
+                          <td align="right" valign="middle"><label> TAN</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Drive   </td>
+                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Cylinder   </td>
+                          <td align="right" valign="middle"><label> 6</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Fuel     </td>
+                          <td align="right" valign="middle"><label> GAS</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Keys     </td>
+                          <td align="right" valign="middle"><label> YES</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Notes </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                  </table>
+
+
+
+
+
+              </div>
+          </ion-slide>
+          <ion-slide>
+              <div class="inventorymatch-detail-car-area">
+
+                  <ion-slides [options]="mySlideOptions" class="imageSlides">
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                      <ion-slide>
+                          <div class="detail_bigcar">
+                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+
+                  <!--  <div class="detail_smcar">
+                    <ul>
+                     <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
+                     <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
+                      <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
+                       <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
+                        <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
+                            </ul>
+                              <div class="clearfix"></div>
+
+                    </div>-->
+
+
+                  <div class="inventorymatch_detail_formgroup">
+
+                      <div class="progress">
+                          <div class="progress-bar progress-bar-striped active" role="progressbar"
+                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                              40%
+                          </div>
+                      </div>
+
+
+                      <!-- <ion-item>
+                           <ion-label>Want to participate?</ion-label>
+                           <ion-select [(ngModel)]="participate">
+                               <ion-option value="y" selected="true">Yes</ion-option>
+                               <ion-option value="n">No</ion-option>
+                           </ion-select>
+                       </ion-item>
+
+                       <div class="ion-setbox">
+                           <ion-label color="primary">Set your max bid</ion-label>
+                           <ion-input placeholder="Text Input"></ion-input>
+                           <button>Set</button>
+                       </div>
+
+                       <div class="ion-setbox-bottom">
+                        <h2>Suggested Max Bid $ 20,000 </h2>
+
+                       <img src="assets/images/inven_img2.jpg">
+
+                        <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
+                       </div>-->
+
+
+                  </div>
+
+
+              </div>
+              <div class="inventorymatch-bottom-areadetail">
+
+
+
+                  <table border="0">
+                      <tr>
+                          <th align="left" valign="middle"><strong>Details</strong></th>
+                          <th align="right" valign="middle">Glossary</th>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Doc Type </td>
+                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Odometer </td>
+                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Highlights   </td>
+                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
+                          <td align="right" valign="middle"><label> SIDE</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Secondary Damage  </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Est. Retail Value </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Body Style    </td>
+                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Color   </td>
+                          <td align="right" valign="middle"><label> TAN</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
+                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Drive   </td>
+                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Cylinder   </td>
+                          <td align="right" valign="middle"><label> 6</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Fuel     </td>
+                          <td align="right" valign="middle"><label> GAS</label></td>
+                      </tr>
+
+
+                      <tr>
+                          <td align="left" valign="middle">Keys     </td>
+                          <td align="right" valign="middle"><label> YES</label></td>
+                      </tr>
+
+                      <tr>
+                          <td align="left" valign="middle">Notes </td>
+                          <td align="right" valign="middle">&nbsp;</td>
+                      </tr>
+
+                  </table>
+
+
+
+
+
+              </div>
+          </ion-slide>
+      </ion-slides>
+
+
+
       
 
   </div>

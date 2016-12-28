@@ -16,15 +16,14 @@
      </div>
      
      <div class="preferences_text1">
-        <h2>Can we send you text and email alerts 
-when we find you a match? </h2>
+        <h2>Can we send you text and email alerts when we find you a match? </h2>
 
       <div class="preferences_chakebox1">
 
 
-         <div class="mr_chakebox"> <input type="radio" name="isAlerts"> <label>Yes</label>    <div class="clearfix"></div></div>
+         <div class="mr_chakebox"> <input type="radio" name="isAlerts" (click)="cngSendmail(1)" (select)="cngSendmail(1)" checked="{{chkSendmail(1)}}"> <label>Yes</label>    <div class="clearfix"></div></div>
 
-          <div class="mr_chakebox">  <input type="radio" name="isAlerts"> <label>No</label>    <div class="clearfix"></div></div>
+          <div class="mr_chakebox">  <input type="radio" name="isAlerts" (click)="cngSendmail(0)" (select)="cngSendmail(0)" checked="{{chkSendmail(0)}}"> <label>No</label>    <div class="clearfix"></div></div>
 
 
 
@@ -42,9 +41,9 @@ when we find you a match? </h2>
        <h3>Would you like to use the smart retail calculator during your window of  engagement?  </h3>
        
          <div class="preferences_chakebox2">
-             <div class="mr_chakebox"> <input type="radio" name="retail_calc"> <label>Yes</label></div>
+             <div class="mr_chakebox"> <input type="radio" name="retail_calc" (click)="cngretailCalc(1)" checked="{{chkretailCalc(1)}}"> <label>Yes</label></div>
 
-             <div class="mr_chakebox">  <input type="radio" name="retail_calc"> <label>No</label></div>
+             <div class="mr_chakebox">  <input type="radio" name="retail_calc" (click)="cngretailCalc(0)" checked="{{chkretailCalc(0)}}"> <label>No</label></div>
   
        <div class="clearfix"></div>
   
@@ -53,7 +52,7 @@ when we find you a match? </h2>
      
      
      <div class="preferences_btngroup">
-      <button class="grbtn1" (click)="gotonext()">Skip</button>
+      <button class="grbtn1" (click)="gotoskip()">Skip</button>
        <button class="grbtn2" (click)="gotonext()">Next</button>
       <div class="clearfix"></div>
      

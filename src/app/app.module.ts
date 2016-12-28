@@ -11,6 +11,16 @@ import { LoginPage } from '../pages/login/login';
 import { LogOutPage } from '../pages/logout/logout';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { FinancingPage } from '../pages/financing/financing';
+import { Financing2Page } from '../pages/financing2/financing2';
+import { Financing3Page } from '../pages/financing3/financing3';
+import { Financing4Page } from '../pages/financing4/financing4';
+import { Financing5Page } from '../pages/financing5/financing5';
+import { Financing6Page } from '../pages/financing6/financing6';
+import { Financing7Page } from '../pages/financing7/financing7';
+import { Financing8Page } from '../pages/financing8/financing8';
+import { Financing9Page } from '../pages/financing9/financing9';
+import { Financing10Page } from '../pages/financing10/financing10';
+import { Financing11Page } from '../pages/financing11/financing11';
 import { PopoverLocationPage } from '../pages/popoverlocation/popoverlocation';
 import { PopoverProfilePage } from '../pages/popoverprofile/popoverprofile';
 import { PopoverConatctPage } from '../pages/popovercontact/popovercontact';
@@ -32,6 +42,7 @@ import { ManagePreferences8Page } from '../pages/managepreferences8/manageprefer
 import { ManagePreferences9Page } from '../pages/managepreferences9/managepreferences9';
 import { ManagePreferences10Page } from '../pages/managepreferences10/managepreferences10';
 import { ManagePreferences11Page } from '../pages/managepreferences11/managepreferences11';
+import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
 
 @NgModule({
   declarations: [
@@ -45,6 +56,16 @@ import { ManagePreferences11Page } from '../pages/managepreferences11/managepref
     LogOutPage,
     DashboardPage,
     FinancingPage,
+    Financing2Page,
+    Financing3Page,
+    Financing4Page,
+    Financing5Page,
+    Financing6Page,
+    Financing7Page,
+    Financing8Page,
+    Financing9Page,
+    Financing10Page,
+    Financing11Page,
     PopoverConatctPage,
     PopoverProfilePage,
     PopoverLocationPage,
@@ -65,7 +86,8 @@ import { ManagePreferences11Page } from '../pages/managepreferences11/managepref
     ManagePreferences8Page,
     ManagePreferences9Page,
     ManagePreferences10Page,
-    ManagePreferences11Page
+    ManagePreferences11Page,
+    RecentRsvpPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -82,6 +104,16 @@ import { ManagePreferences11Page } from '../pages/managepreferences11/managepref
     LogOutPage,
     DashboardPage,
     FinancingPage,
+    Financing2Page,
+    Financing3Page,
+    Financing4Page,
+    Financing5Page,
+    Financing6Page,
+    Financing7Page,
+    Financing8Page,
+    Financing9Page,
+    Financing10Page,
+    Financing11Page,
     PopoverConatctPage,
     PopoverProfilePage,
     PopoverLocationPage,
@@ -102,7 +134,8 @@ import { ManagePreferences11Page } from '../pages/managepreferences11/managepref
     ManagePreferences8Page,
     ManagePreferences9Page,
     ManagePreferences10Page,
-    ManagePreferences11Page
+    ManagePreferences11Page,
+    RecentRsvpPage
   ],
   providers: [Storage]
 })

@@ -1,9 +1,31 @@
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 page-messagedealer{
   background: #303030;
 
   .content-md {
     background: #303030;
+.clearfix{ clear: both;}
 
+     .message_list_wrapper{ width: 100%;
+
+        .message_list{ background: #fff; padding: 10px; border-bottom: solid 1px #303030;
+
+           h1{ margin: 0; padding: 2px 0 2px 26px; background:  url("../../assets/images/inboxicon.png") no-repeat scroll left 0px; background-size: 20px; font-family: 'Open Sans'; font-size:13px; color: #000; }
+
+
+          span{ width: 50px; display: block; float: right;  padding-left: 18px; margin-left: 5px;
+            background: url("../../assets/images/msgtime.png") no-repeat scroll left 1px; background-size: 13px;}
+
+          strong{ display: inline-block; float: left; font-size:14px;}
+          }
+
+       h2{  font-family: 'Open Sans';  font-size: 13px; color:#111; margin: 0; padding: 5px 0; font-weight: 700;}
+
+       h3{ font-size: 12px; color: #5b5b5b; margin: 0; padding: 0; font-family: 'Open Sans';}
+
+        .read{ background: #ccc;}
+
+     }
 
 
   }

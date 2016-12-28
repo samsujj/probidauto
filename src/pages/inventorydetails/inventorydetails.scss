@@ -204,3 +204,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
   .alert-radio-inner{background-color: #ffffff!important;}
 
 }
+
+
+
+.progress{ width: 100%; background: #ccc; border: solid 1px #b0b0b0;
+
+.progress-bar{ background:#02e402; padding: 5px; text-align: center; font-size: 11px; color: #000;}
+
+}
+
+
+.page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
+
+  a{ display:block; width: 32px;}
+
+  img{ width: 100%;}
+
+  .prevbtn{ float: left;}
+
+  .nextbtn{ float: right;}
+
+}

@@ -10,6 +10,7 @@ import {OnGoingauctionPage} from '../ongoingauction/ongoingauction';
 import {MessageDealerPage} from '../messagedealer/messagedealer';
 import {ManagePreferencesPage} from '../managepreferences/managepreferences';
 import {InventoryMatchPage} from '../inventorymatch/inventorymatch';
+import {RecentRsvpPage} from '../recentrsvp/recentrsvp';
 import {BlankPage} from '../blank/blank';
 
 import { Storage } from '@ionic/storage';
@@ -40,6 +41,7 @@ export class DashboardPage {
   public messagedealerpage = MessageDealerPage;
   public managepreferencespage = ManagePreferencesPage;
   public inventorymatchpage = InventoryMatchPage;
+  public recentrsvppage = RecentRsvpPage;
 
   constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController, public storage: Storage,private _http: Http) {
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import {Financing2Page} from '../financing2/financing2';
 
 @Component({
   selector: 'page-financing',
@@ -15,6 +16,10 @@ export class FinancingPage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  gotoskip(){
+    this.navCtrl.push(Financing2Page);
   }
 
 

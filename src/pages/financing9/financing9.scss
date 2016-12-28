@@ -1,0 +1,203 @@
+ion-header{
+  background: #272727;
+  text-align: center;
+
+
+  button{
+    float: left;
+    background: none;
+    margin-left: 2%;
+
+    ion-icon{
+      font-size:40px;
+      color: #979596;
+    }
+  }
+
+  .right-btn{
+    float: right;
+    margin-right: 3%;
+  }
+
+  ion-title{
+    text-align: center;
+    display: inline-block;
+    .toolbar-title{
+      color: #ffffff;
+      font-size: 25px;
+      line-height: 39px;
+    }
+  }
+
+}
+
+page-financing9{
+  background: #fb4a32;
+
+
+  .content-md {
+    background: #fb4a32;
+
+
+    .main-wrapper{
+      font-family: Arial;
+      .block1{
+        padding: 20px 10px;
+
+
+
+
+
+        .logo-area{
+          width: 65%;
+          margin: 0px auto;
+
+          img{ width:100%;}
+        }
+
+        h1{
+          text-transform: uppercase;
+          color: #ffffff;
+          font-size:20px;
+          text-align: center;
+          font-weight: bold; margin-bottom: 0px; padding-bottom: 0px;
+
+          @media(min-width:500px) {
+            font-size:24px;
+          }
+
+          @media(min-width:640px) {
+            font-size:28px;
+          }
+
+          @media(min-width:750px) {
+            font-size:32px;
+          }
+
+          @media(min-width:900px) {
+            font-size:35px;
+          }
+
+
+        }
+
+        .preferences_text1{ padding:20px 15px 20px 15px;
+
+          h2{ margin:0; padding:10px; font-family: 'Open Sans'; font-size:30px; color:#fff; text-transform:uppercase;   line-height:40px; text-align:center; font-weight: 700; }
+
+
+        }
+
+
+
+      }
+    }
+
+
+    .clearfix{ clear:both;}
+
+
+    .doller_inputbg{ background:#fff  url("../../assets/images/dollariconnew.png") no-repeat 5px 12px!important; background-size: 14px!important; padding-left: 18px!important;}
+
+    .preferences_btngroup {
+      padding: 20px;
+
+      .grbtn_nextbtn {
+        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #2f2f2f 0%, #111111 100%) repeat scroll 0 0;
+        border-radius: 30px;
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 45px;
+        text-transform: uppercase;
+
+        margin: 0 auto;
+        width: 80px;
+      }
+
+      .btnwrapper {
+        width: 33.3% !important;
+        float: left;
+
+        .sbtncon {
+          margin: 0 auto;
+        }
+        .pbtncon {
+          float: left;
+        }
+        .nbtncon {
+          float: right;
+        }
+
+      }
+
+    }
+
+
+    .block2 {
+      background: #303030;
+      padding: 20px;
+
+
+      .h6text{ font-size: 12px; color: #8f8f8f; margin:0 0 10px 0; padding: 0;}
+
+
+      .block-divider{
+        width: 100%;
+        height: 2px;
+        margin:15px 0; background: #000; border-bottom: solid 1px #665f66;
+      }
+
+      label{ display:block; padding: 10px 0; font-size: 14px; color: #fff; font-weight:normal;
+
+        strong{ font-weight: bold; display: inline-block; float: left; padding: 2px 8px 0 0;}
+        input{ width: 20px; float: left;}
+
+      }
+
+
+      .formbox{ width: 100%; height: 40px; padding: 0 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 0;}
+      .formbox2{ width: 100%; height: 40px; padding: 10px 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 0;}
+      .formbox3{ width: 100%; height: 40px; padding: 0px 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 0; outline: none;
+
+        option{ padding: 5px;}
+      }
+
+      .formbox4{ width: 46%; height: 40px; padding: 0 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 5px 5px 0;}
+      .formbox5{ width: 100%; height: 100px; padding: 10px 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 0;}
+
+
+      .formbox6{ width: 46%; height: 40px; padding: 0 5px; background: #fff; border: solid 1px #000; font-size: 14px; color: #5b5b5b; margin: 5px 5px 5px 0;}
+
+
+      .form3_rediodiv{ width: 70px; float: left; margin: 5px 2px 8px 0; color: #fff;
+
+        input{ display: inline-block; float: left; margin: 0;}
+
+        span{display: inline-block; float: left; padding: 2px 0 0 5px;}
+
+      }
+
+
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #5b5b5b; opacity: 1;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #5b5b5b; opacity: 1;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #5b5b5b; opacity: 1;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #5b5b5b; opacity: 1;
+      }
+
+
+    }
+
+
+
+  }
+}

@@ -20,42 +20,14 @@
 
         <div class="preferences_text2">
             <div class="preferences_chakebox3">
-                <div class="mr_chakebox2">
-                    <input type="radio" name="purchase_time">
-                    <label>As soon as I find the right vehicle</label>
+
+                <div class="mr_chakebox2" *ngFor="let item of purchasetimelist; let i=index;">
+                    <input type="radio" name="purchase_time" (click)="cngPurTime(item._id)" checked="{{chkPurTime(item._id)}}">
+                    <label>{{item.name}}</label>
                     <div class="clearfix"></div>
                 </div>
 
 
-            <div class="mr_chakebox2">
-                <input type="radio" name="purchase_time">
-                <label>Within the next month</label>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="mr_chakebox2">
-                <input type="radio" name="purchase_time">
-                <label>Within the next 2 months</label>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="mr_chakebox2">
-                <input type="radio" name="purchase_time">
-                <label>Within the next 6 months</label>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="mr_chakebox2">
-                <input type="radio" name="purchase_time">
-                <label>I am not sure</label>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="mr_chakebox2">
-                <input type="radio" name="purchase_time">
-                <label>Just want to see what is available</label>
-                <div class="clearfix"></div>
-            </div>
             </div>
             <div class="clearfix"></div>
 
@@ -65,7 +37,7 @@
     <div class="preferences_btngroup">
 
        <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-        <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+        <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
         <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
         <div class="clearfix"></div>
     </div>
