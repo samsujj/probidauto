@@ -27,43 +27,13 @@
        
        
          <div class="preferences_chakebox6">
-             <div class="mr_chakebox2"> <input type="radio" name="mileage"> <label>Any Mileage   </label>
+             <div class="mr_chakebox2"  *ngFor="let item of car_mileage_list; let i=index;">
+                 <input type="radio" name="mileage" (click)="cngMileage(item._id)" checked="{{chkMileage(item._id)}}">
+                 <label>{{item.mileage}}</label>
                  <div class="clearfix"></div>
 
              </div>
 
-             <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 15,000   </label>
-                 <div class="clearfix"></div>
-
-             </div>
-              <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 30,000 </label>
-                  <div class="clearfix"></div>
-              </div>
-               <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 45,000   </label>
-                   <div class="clearfix"></div>
-
-               </div>
-                <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 60,000    </label>
-                    <div class="clearfix"></div>
-                </div>
-                 <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 75,000</label>
-                     <div class="clearfix"></div>
-                 </div>
-                   <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 100,000 </label>
-
-                       <div class="clearfix"></div>
-                   </div>
-                    <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 150,000  </label>
-                        <div class="clearfix"></div>
-                    </div>
-                      <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Under 200,000 </label>
-                          <div class="clearfix"></div>
-                      </div>
-                       <div class="mr_chakebox2">  <input type="radio" name="mileage"> <label>Over 200,000</label>
-
-                           <div class="clearfix"></div>
-                       </div>
-             
   
        <div class="clearfix"></div>
   
@@ -74,7 +44,7 @@
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
           <div class="clearfix"></div>
       </div>

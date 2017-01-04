@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController,ToastController,PopoverController } from 'ionic-angular';
+import { NavController,ToastController,PopoverController,ModalController } from 'ionic-angular';
+import {MessageAddPage} from '../messageadd/messageadd';
+import {MessageDetailsPage} from '../messagedetails/messagedetails';
 
 
 @Component({
@@ -8,8 +10,16 @@ import { NavController,ToastController,PopoverController } from 'ionic-angular';
 })
 export class MessageDealerPage {
 
-  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController) {
+  public messageaddpage = MessageAddPage;
 
+
+  constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController,public modalCtrl: ModalController) {
+
+  }
+
+  goDetails(){
+    let modal = this.modalCtrl.create(MessageDetailsPage);
+    modal.present();
   }
 
 }

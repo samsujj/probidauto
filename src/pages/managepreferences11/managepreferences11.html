@@ -28,16 +28,16 @@ important features </h2>
      <div class="preferences_text3">
        
        <div class="maintable">
+           <!--<div class="carmgdiv">
+               <div class="carmg">
+                   <img src="assets/images/car_k1.png">
+               </div>
 
-
-
-           <div class="carmgdiv">
-          <div class="carmg"><img src="assets/images/car_k1.png"></div>
-           
-           <h2>Power locks</h2>
-            <input type="checkbox" />
-             <div class="clearfix"></div>
+               <h2>Power locks</h2>
+               <input type="checkbox" />
+               <div class="clearfix"></div>
            </div>
+
            <div class="carmgdiv">
           <div class="carmg"><img src="assets/images/car_k2.png"></div>
            
@@ -171,14 +171,23 @@ important features </h2>
             <input type="checkbox" />
              <div class="clearfix"></div>
            </div>
+
            <div class="carmgdiv">
-          <div class="carmg"><img src="assets/images/car_k21.png"></div>
-           
-           <h2>Tinted Windows</h2>
-            <input type="checkbox" />
-             <div class="clearfix"></div>
-           </div>
-  
+               <div class="carmg">
+                   <img src="assets/images/car_k21.png">
+               </div>
+
+               <h2>Tinted Windows</h2>
+               <input type="checkbox" />
+               <div class="clearfix"></div>
+           </div>-->
+
+
+           <ion-item class="carmgdiv2" *ngFor="let item of carfeaturelist; let i=index;">
+               <ion-checkbox checked="{{chkcarbodystyle(item._id)}}" (ionChange)="cngcarbodystyle(item._id,$event.checked)"></ion-checkbox>
+               <ion-avatar item-left><img src="http://probidbackend.influxiq.com/uploadedfiles/sharelinks/{{item.logo}}" /></ion-avatar>
+               <ion-label>{{item.feature}}</ion-label>
+           </ion-item>
           
 
 
@@ -196,16 +205,17 @@ important features </h2>
        <div class="managepreference_bottom_wrapper">
 
            <div class="managepreference_div">
-      <input type="radio" /> <span>YES</span>
-       <div class="clearfix"></div>
+               <input type="radio" name="isAlerts" (click)="cngFinaceCheck(1)" (select)="cngFinaceCheck(1)" checked="{{chkFinaceCheck(1)}}">
+               <span>YES</span>
+               <div class="clearfix"></div>
            </div>
            <div class="managepreference_div">
-
-           <input type="radio" /> <span>NO</span>
-       <div class="clearfix"></div>
+               <input type="radio" name="isAlerts" (click)="cngFinaceCheck(0)" (select)="cngFinaceCheck(0)" checked="{{chkFinaceCheck(0)}}">
+               <span>NO</span>
+               <div class="clearfix"></div>
            </div>
-           <div class="clearfix"></div>
 
+           <div class="clearfix"></div>
        </div>
 
    </div>
@@ -213,7 +223,7 @@ important features </h2>
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Finsh</button></div>
           <div class="clearfix"></div>
       </div>

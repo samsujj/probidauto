@@ -29,7 +29,7 @@
        
        
          <div class="preferences_chakebox7">
-             <div class="mr_chakebox2"> <input type="checkbox" name="preffered_color"> <label>White/White Pearl   </label>
+            <!-- <div class="mr_chakebox2"> <input type="checkbox" name="preffered_color"> <label>White/White Pearl   </label>
                  <div class="clearfix"></div>
 
              </div>
@@ -64,7 +64,12 @@
                        <div class="mr_chakebox2">  <input type="checkbox" name="preffered_color"> <label>Others</label>
 
                            <div class="clearfix"></div>
-                       </div>
+                       </div>-->
+
+             <ion-item class="mr_chakebox22" *ngFor="let item of color_list; let i=index;">
+                 <ion-label>{{item.color}}</ion-label>
+                 <ion-checkbox checked="{{chkColor(item._id)}}" (ionChange)="cngColor(item._id,$event.checked)"></ion-checkbox>
+             </ion-item>
              
   
        <div class="clearfix"></div>

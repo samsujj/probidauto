@@ -43,6 +43,8 @@ import { ManagePreferences9Page } from '../pages/managepreferences9/manageprefer
 import { ManagePreferences10Page } from '../pages/managepreferences10/managepreferences10';
 import { ManagePreferences11Page } from '../pages/managepreferences11/managepreferences11';
 import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
+import { MessageAddPage } from '../pages/messageadd/messageadd';
+import { MessageDetailsPage } from '../pages/messagedetails/messagedetails';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,9 @@ import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
     ManagePreferences9Page,
     ManagePreferences10Page,
     ManagePreferences11Page,
-    RecentRsvpPage
+    RecentRsvpPage,
+    MessageAddPage,
+    MessageDetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -135,7 +139,9 @@ import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
     ManagePreferences9Page,
     ManagePreferences10Page,
     ManagePreferences11Page,
-    RecentRsvpPage
+    RecentRsvpPage,
+    MessageAddPage,
+    MessageDetailsPage
   ],
   providers: [Storage]
 })

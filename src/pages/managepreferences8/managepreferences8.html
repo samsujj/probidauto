@@ -30,7 +30,7 @@ you are interested in</h2>
 
 
 
-           <div class="carlogodiv"><div><img src="assets/images/car_logo1.png"></div></div>
+           <!--<div class="carlogodiv"><div><img src="assets/images/car_logo1.png"></div></div>
            <div class="carlogodiv"><div><img src="assets/images/car_logo2.png"></div></div>
            <div class="carlogodiv"><div><img src="assets/images/car_logo3.png"></div></div>
            <div class="carlogodiv"><div><img src="assets/images/car_logo4.png"></div></div>
@@ -41,7 +41,13 @@ you are interested in</h2>
            <div class="carlogodiv"><div><img src="assets/images/car_logo9.png"></div></div>
            <div class="carlogodiv"><div><img src="assets/images/car_logo10.png"></div></div>
            <div class="carlogodiv"><div><img src="assets/images/car_logo11.png"></div></div>
-           <div class="carlogodiv"><div><img src="assets/images/car_logo12.png"></div></div>
+           <div class="carlogodiv"><div><img src="assets/images/car_logo12.png"></div></div>-->
+
+           <div class="carlogodiv"  *ngFor="let item of carlogolist; let i=index;" ngClass="{{selectClass(item._id)}}" (click)="selectCar(item._id)">
+               <div>
+                   <img src="http://probidbackend.influxiq.com/uploadedfiles/sharelinks/{{item.logo}}">
+               </div>
+           </div>
 
 
 
@@ -56,7 +62,7 @@ you are interested in</h2>
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
           <div class="clearfix"></div>
       </div>

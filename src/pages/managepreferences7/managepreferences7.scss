@@ -74,6 +74,42 @@ page-managepreferences7{
 
         }
 
+        .mr_chakebox22{
+          background: none;
+          padding-left: 0;
+          color: #ffffff;
+          font-family: "Open Sans";
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          height: auto;
+          min-height: 40px;
+
+          .checkbox-md{
+            margin-right: 15px;
+
+            .checkbox-checked {
+              background-color: #fb4a32;
+              border-color: #fb4a32;
+            }
+
+          }
+
+          .item-inner{
+            border: none;
+            padding-right: 0;
+
+            .input-wrapper{
+              ion-label{
+                text-overflow:unset;
+                white-space : normal;
+              }
+            }
+
+          }
+
+        }
+
 
       }
     }

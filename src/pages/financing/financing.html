@@ -15,20 +15,19 @@
       <div class="logo-area">
         <img src="assets/images/slider-logo.png">
       </div>
-      <h1>Your dealership rep is : Billy Allen</h1>
+      <h1 *ngIf="dealerdetails">Your dealership rep is : {{dealerdetails.fname}} {{dealerdetails.lname}}</h1>
     </div>
 
-    <div class="block2">
+    <div class="block2" *ngIf="dealerdetails">
       <div class="sub-block1">
-        <h2>Kan Graff DealerShip, 54856 Sandy Drive, Taylorsville UT 84123</h2>
+        <h2>{{dealerdetails.address}}, {{dealerdetails.city}} {{dealerdetails.state}} {{dealerdetails.zip}}</h2>
       </div>
       <div class="block-divider"></div>
       <div class="sub-block1">
-        <h2>Office : 745-565-852</h2>
-        <h2 class="h2-last">Cell : 745-565-852</h2>
+        <h2>Phone : {{dealerdetails.phone}}</h2>
       </div>
       <div class="sub-block2">
-        <span>billy_allen@kangraff.com</span>
+        <span>{{dealerdetails.email}}</span>
       </div>
     </div>
 

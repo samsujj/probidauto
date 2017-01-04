@@ -13,6 +13,8 @@ import {BlankPage} from '../blank/blank';
 })
 export class ManagePreferences2Page {
 
+  public adminUrl = 'http://influxiq.com:8003/';
+
   public userdetails;
   public username;
   public purchase_time;
@@ -42,7 +44,7 @@ export class ManagePreferences2Page {
   }
 
   getUserdetails(){
-    var link = 'http://influxiq.com:8001/editdcustomerbyusername';
+    var link = this.adminUrl+'editdcustomerbyusername';
     var formdata = {username:this.username};
 
     this._http.post(link,formdata)
@@ -50,7 +52,6 @@ export class ManagePreferences2Page {
           var data2 = data.json();
           if(data2.length){
             data2 = data2[0];
-            console.log(data2);
 
             if(typeof(data2.purchase_time) != 'undefined'){
               this.purchase_time = data2.purchase_time;
@@ -70,7 +71,7 @@ export class ManagePreferences2Page {
   }
 
   getPurchaseTimeList(){
-    var link = 'http://influxiq.com:8001/purchasetimelist';
+    var link = this.adminUrl+'purchasetimelist';
 
     this._http.get(link)
         .subscribe(data => {
@@ -105,14 +106,13 @@ export class ManagePreferences2Page {
       });
       toast.present();
     }else{
-      console.log(this.purchase_time);
-/*
-      var link = 'http://influxiq.com:8001/updatecustomerformobile';
-      var formdata = {purchase_time:this.purchase_time,username:this.username};
+      var link = this.adminUrl+'updatecustomerformobile';
+      var formdata1 = {purchase_time:this.purchase_time};
+      var formdata = {arg:formdata1,username:this.username};
 
       this._http.post(link,formdata)
           .subscribe(data => {
-            this.navCtrl.push(ManagePreferences2Page);
+            this.navCtrl.push(ManagePreferences3Page);
           }, error => {
             let toast = this.toastCtrl.create({
               message: 'Database error occurred. Try again!',
@@ -120,7 +120,7 @@ export class ManagePreferences2Page {
             });
             toast.present();
           });
-*/    }
+    }
 
   }
 

@@ -13,6 +13,8 @@ import {ManagePreferences4Page} from '../managepreferences4/managepreferences4';
 })
 export class ManagePreferences3Page {
 
+  public adminUrl = 'http://influxiq.com:8003/';
+
   public userdetails;
   public username;
   public base_price;
@@ -45,7 +47,7 @@ export class ManagePreferences3Page {
   }
 
   getUserdetails(){
-    var link = 'http://influxiq.com:8001/editdcustomerbyusername';
+    var link = this.adminUrl+'editdcustomerbyusername';
     var formdata = {username:this.username};
 
     this._http.post(link,formdata)
@@ -53,7 +55,6 @@ export class ManagePreferences3Page {
           var data2 = data.json();
           if(data2.length){
             data2 = data2[0];
-            console.log(data2);
 
             if(typeof(data2.base_price) != 'undefined'){
               this.base_price = data2.base_price;
@@ -73,7 +74,7 @@ export class ManagePreferences3Page {
   }
 
   getBasePriceList(){
-    var link = 'http://influxiq.com:8001/basepricelist';
+    var link = this.adminUrl+'basepricelist';
 
     this._http.get(link)
         .subscribe(data => {
@@ -101,20 +102,50 @@ export class ManagePreferences3Page {
 
 
   gotonext(){
-    this.navCtrl.push(ManagePreferences4Page);
+    if(typeof(this.base_price) == 'undefined' || this.base_price.length == 0){
+      let toast = this.toastCtrl.create({
+        message: 'Please choose at least one.',
+        duration: 2000
+      });
+      toast.present();
+    }else{
+      var link = this.adminUrl+'updatecustomerformobile';
+      var formdata1 = {base_price:this.base_price};
+      var formdata = {arg:formdata1,username:this.username};
+
+      this._http.post(link,formdata)
+          .subscribe(data => {
+            this.navCtrl.push(ManagePreferences4Page);
+          }, error => {
+            let toast = this.toastCtrl.create({
+              message: 'Database error occurred. Try again!',
+              duration: 2000
+            });
+            toast.present();
+          });
+    }
+
   }
 
-  cngBasePrice(rval){
-    //this.cngBasePrice = rval;
-    console.log(rval);
+  cngBasePrice(rval,isChk){
+    if(isChk){
+      if(this.base_price.indexOf(rval) < 0){
+        this.base_price.push(rval);
+      }
+    }else{
+      if(this.base_price.indexOf(rval) >= 0){
+        this.base_price.splice(this.base_price.indexOf(rval), 1);
+      }
+    }
+
   }
 
   chkBasePrice(rval){
-    return false;
-    /*if(this.base_price.indexOf(rval) >  -1){
+
+    if(this.base_price.indexOf(rval) >  -1){
       return true;
     }
-    return false;*/
+    return false;
   }
 
 }

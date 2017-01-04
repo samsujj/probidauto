@@ -37,6 +37,34 @@ page-managepreferences3{
 
         }
 
+        .mr_chakebox22{
+          background: none;
+          padding-left: 0;
+          color: #ffffff;
+          font-family: "Open Sans";
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          height: 40px;
+          min-height: auto;
+
+          .checkbox-md{
+            margin-right: 15px;
+
+            .checkbox-checked {
+              background-color: #fb4a32;
+              border-color: #fb4a32;
+            }
+
+          }
+
+          .item-inner{
+            border: none;
+            padding-right: 0;
+          }
+
+        }
+
 
       }
     }

@@ -30,12 +30,18 @@
        
          <div class="preferences_chakebox4">
 
-             <div class="mr_chakebox2" *ngFor="let item of base_price_list; let i=index;">
-                 <input name="base_price" type="checkbox" (click)="cngBasePrice(item._id)">
+             <!--<div class="mr_chakebox2" *ngFor="let item of base_price_list; let i=index;">
+                 <input name="base_price" type="checkbox" (click)="cngBasePrice(item._id)" ng>
                  <label>{{item.baseprice}}</label>
 
                  <div class="clearfix"></div>
-             </div>
+             </div>-->
+
+             <ion-item class="mr_chakebox22" *ngFor="let item of base_price_list; let i=index;">
+                 <ion-label>{{item.baseprice}}</ion-label>
+                 <ion-checkbox checked="{{chkBasePrice(item._id)}}" (ionChange)="cngBasePrice(item._id,$event.checked)"></ion-checkbox>
+             </ion-item>
+
 
 
        <div class="clearfix"></div>

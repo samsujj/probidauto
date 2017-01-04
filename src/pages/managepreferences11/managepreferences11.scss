@@ -78,6 +78,52 @@ page-managepreferences11{
 	
 	
 	}
+
+      .carmgdiv2{
+        display: block;
+        width:46%;
+        float: left;
+        margin: 2%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+
+        @media screen and (max-width:480px) {
+          width:98%; margin: 2% 1%;
+        }
+
+        .checkbox-md{
+
+          .checkbox-checked {
+            background-color: #fb4a32;
+            border-color: #fb4a32;
+          }
+
+        }
+
+        ion-avatar{
+          height: 55px;
+          margin: 8px 0;
+          display: inline-block;
+          float: left;
+          img{
+            border-radius: unset;
+            max-width: 45px;
+            max-height: 45px;
+            margin: 0 auto;
+          }
+        }
+
+        .item-inner{
+          float: left;
+          border-bottom: none;
+          margin-left: 22px;
+          text-transform: uppercase;
+        }
+
+      }
+
+
     }
 
 

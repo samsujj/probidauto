@@ -40,7 +40,7 @@ export class LoginPage {
 //        var headers = new Headers();
 //        headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        var link = 'http://influxiq.com:8001/customercheckformobile?username='+formaval.username+'&password='+formaval.password;
+        var link = 'http://influxiq.com:8003/customercheckformobile?username='+formaval.username+'&password='+formaval.password;
 
         this._http.get(link)
             .subscribe(data => {

@@ -9,42 +9,35 @@
 </ion-header>
 
 <ion-content>
-  <div class="main-wrapper">
+    <div class="main-wrapper">
+        <div class="logo-area">
+            <img src="assets/images/slider-logo.png">
+        </div>
 
-     <div class="logo-area">
-        <img src="assets/images/slider-logo.png">
-     </div>
-     
-     <div class="preferences_text1">
-        <h2>Number Listed At Upcoming Auction</h2>
+        <div class="preferences_text1">
+            <h2>Number Listed At Upcoming Auction</h2>
+        </div>
 
-      
-      
-      
-     </div>
-     
-     <div class="preferences_text3">
-      <div class="searchblockbody">
-     <div class="searchblock">
-     <div class="clearlink">
-         <img src="assets/images/clearall.png">
-         <a href="javascript:void(0)">Clear all</a>
-         <div class="clearfix"></div>
-     </div>
+        <div class="preferences_text3">
+            <!--<div class="searchblockbody">
+                <div class="searchblock">
+                    <div class="clearlink">
+                        <img src="assets/images/clearall.png">
+                        <a href="javascript:void(0)">Clear all</a>
+                        <div class="clearfix"></div>
+                    </div>
 
-     <div class="researchlink">
-         <img src="assets/images/searchall.png">
-         <a href="javascript:void(0)">research by make </a>
-         <div class="clearfix"></div>
+                    <div class="researchlink">
+                        <img src="assets/images/searchall.png">
+                        <a href="javascript:void(0)">research by make </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>-->
 
-     </div>
-     
-      <div class="clearfix"></div>
-     </div>
-      </div> 
-       
-         <div class="preferences_chakebox8">
-             <div class="mr_chakebox2"> <input type="checkbox" name="preferred_band"> <label>Ford</label><span>(12)</span>
+            <div class="preferences_chakebox8">
+             <!--<div class="mr_chakebox2"> <input type="checkbox" name="preferred_band"> <label>Ford</label><span>(12)</span>
                  <div class="clearfix"></div>
 
              </div>
@@ -85,13 +78,18 @@
                         <div class="mr_chakebox2">  <input type="checkbox" name="preferred_band"> <label>Mazda </label><span>(15)</span>
 
                            <div class="clearfix"></div>
-                       </div>
+                       </div>-->
+
+             <ion-item class="mr_chakebox22" *ngFor="let item of carlogolist; let i=index;">
+                 <ion-label>{{item.name}}<span>(05)</span></ion-label>
+                 <ion-checkbox checked="{{chkCarlogo(item._id)}}" (ionChange)="cngCarlogo(item._id,$event.checked)"></ion-checkbox>
+             </ion-item>
              
   
        <div class="clearfix"></div>
        
        
-       <button class="allmakes_btn">See all makes</button>
+      <!-- <button class="allmakes_btn">See all makes</button>-->
   
       </div>
      </div>
@@ -100,7 +98,7 @@
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
           <div class="clearfix"></div>
       </div>

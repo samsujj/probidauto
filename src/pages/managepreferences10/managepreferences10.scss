@@ -50,6 +50,65 @@ page-managepreferences10{
     }
 
 
+      .carmgdiv2{
+        display: block;
+        width:46%;
+        float: left;
+        margin: 2%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+
+
+        .checkbox-md{
+
+          .checkbox-checked {
+            background-color: #fb4a32;
+            border-color: #fb4a32;
+          }
+
+        }
+
+        ion-checkbox{
+          margin: 9px 0;
+        }
+
+        ion-avatar{
+          height: 55px;
+          margin: 8px 0;
+          img{
+            border-radius: unset;
+            max-width: 100%;
+            max-height: 50px;
+            margin: 0 auto;
+          }
+        }
+
+        .item-inner{
+          font-size: 14px;
+          padding: 0;
+          text-align: center;
+          text-transform: uppercase;
+          .input-wrapper{
+            ion-label{
+              margin-right: 0;
+              margin-left: 0;
+            }
+          }
+        }
+
+      }
+
+
+      .item-checkbox-checked{
+        img{
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+      }
+
+
+
       .activeblog{
 
 

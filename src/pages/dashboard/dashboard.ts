@@ -23,6 +23,8 @@ import {Http} from "@angular/http";
 })
 export class DashboardPage {
 
+  public adminUrl = 'http://influxiq.com:8003/';
+
   mySlideOptions = {
     initialSlide: 0,
     pager : true
@@ -84,7 +86,7 @@ export class DashboardPage {
 
     console.log(this.dealerusername);
 
-    var link = 'http://influxiq.com:8001/editdealerbyusername';
+    var link = this.adminUrl+'editdealerbyusername';
     var data = {'username':this.dealerusername};
 
     this._http.post(link, data)

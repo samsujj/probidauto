@@ -9,78 +9,82 @@
 </ion-header>
 
 <ion-content>
-  <div class="main-wrapper">
 
-     <div class="logo-area">
-        <img src="assets/images/slider-logo.png">
-     </div>
-     
-     <div class="preferences_text1">
-        <h2>Please select all of the makes that <br/>
-you are interested in</h2>
+    <div class="main-wrapper">
+        <div class="logo-area">
+            <img src="assets/images/slider-logo.png">
+        </div>
 
-      
-      
-      
-     </div>
-     
-     <div class="preferences_text3">
-       
-       <div class="maintable">
+        <div class="preferences_text1">
+            <h2>Please select all of the makes that <br/>you are interested in</h2>
+        </div>
 
+        <div class="preferences_text3">
+            <div class="maintable">
+                <!--<div class="carmgdiv activeblog">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car1.png">
+                    </div>
+                    <h2>awd/4wd</h2>
+                </div>
 
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car2.png">
+                    </div>
+                    <h2>Convertible</h2>
+                </div>
 
-           <div class="carmgdiv activeblog">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div>
-            <div class="carmg"><img src="assets/images/car1.png"></div>
-           
-           <h2>awd/4wd</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car2.png"></div>
-           
-           <h2>Convertible</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car3.png"></div>
-           
-           <h2>Coupe</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car4.png"></div>
-           
-           <h2>Classic</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car5.png"></div>
-           
-           <h2>Hatchback</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car6.png"></div>
-           
-           <h2>Hybrid/Electric</h2>
-           </div>
-           <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car7.png"></div>
-           
-           <h2>Luxury</h2>
-           </div>
-           <div class="carmgdiv">
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car3.png">
+                    </div>
+                    <h2>Coupe</h2>
+                </div>
+
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car4.png">
+                    </div>
+                    <h2>Classic</h2>
+                </div>
+
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car5.png">
+                    </div>
+                    <h2>Hatchback</h2>
+                </div>
+
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car6.png">
+                    </div>
+                    <h2>Hybrid/Electric</h2>
+                </div>
+
+                <div class="carmgdiv">
+                    <input type="checkbox" />
+                    <div class="clearfix"></div>
+                    <div class="carmg">
+                        <img src="assets/images/car7.png">
+                    </div>
+                    <h2>Luxury</h2>
+                </div>
+
+                <div class="carmgdiv">
            
            <input type="checkbox" />
               <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car8.png"></div>
@@ -109,14 +113,19 @@ you are interested in</h2>
            <h2>Van/Minivan</h2>
            </div>
            <div class="carmgdiv">
-           
-           <input type="checkbox" />
-              <div class="clearfix"></div> <div class="carmg"><img src="assets/images/car12.png"></div>
-           
-           <h2>Wagon</h2>
-           </div>
-          
+               <input type="checkbox" />
+               <div class="clearfix"></div>
+               <div class="carmg">
+                   <img src="assets/images/car12.png">
+               </div>
+               <h2>Wagon</h2>
+           </div>-->
 
+                <ion-item class="carmgdiv2" *ngFor="let item of carbodystylelist; let i=index;">
+                    <ion-checkbox checked="{{chkcarbodystyle(item._id)}}" (ionChange)="cngcarbodystyle(item._id,$event.checked)"></ion-checkbox>
+                    <ion-avatar item-left><img src="http://probidbackend.influxiq.com/uploadedfiles/sharelinks/{{item.logo}}" /></ion-avatar>
+                    <ion-label>{{item.name}}</ion-label>
+                </ion-item>
 
 
 
@@ -130,7 +139,7 @@ you are interested in</h2>
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
           <div class="clearfix"></div>
       </div>

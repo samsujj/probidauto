@@ -12,9 +12,26 @@
   <div class="main-wrapper">
 
 
+    <div class="message_list_top">
+      <div class="message_inbox">
+    <ion-list>
+      <ion-item>
+        <ion-select>
+          <ion-option value="nes">Inbox</ion-option>
+          <ion-option value="n64">Sent</ion-option>
+          <ion-option value="ps">Draft</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+        </div>
+
+    <a [navPush]="messageaddpage" class="messageadd">Add</a>
+      <div class="clearfix"></div>
+    </div>
+
     <div class="message_list_wrapper">
 
-      <div class="message_list">
+      <div class="message_list" (click)="goDetails()">
       <h1>
         <strong>What is Lorem Ipsum</strong>
         <span>2h</span>
@@ -30,7 +47,7 @@
 
 
       </div>
-      <div class="message_list read">
+      <div class="message_list">
       <h1>
         <strong>What is Lorem Ipsum</strong>
         <span>2h</span>

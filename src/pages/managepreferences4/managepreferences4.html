@@ -27,7 +27,7 @@
        
        
          <div class="preferences_chakebox5">
-             <div class="mr_chakebox2"> <input type="checkbox" name="auto_years"> <label>2017  </label>
+             <!--<div class="mr_chakebox2"> <input type="checkbox" name="auto_years"> <label>2017  </label>
                  <div class="clearfix"></div>
              </div>
 
@@ -58,7 +58,12 @@
                     </div>
                       <div class="mr_chakebox2">  <input type="checkbox" name="auto_years"> <label>Before 2010</label>
                           <div class="clearfix"></div>
-                      </div>
+                      </div>-->
+
+             <ion-item class="mr_chakebox22" *ngFor="let item of auto_year_list; let i=index;">
+                 <ion-label>{{item.year}}</ion-label>
+                 <ion-checkbox checked="{{chkBasePrice(item._id)}}" (ionChange)="cngBasePrice(item._id,$event.checked)"></ion-checkbox>
+             </ion-item>
              
   
        <div class="clearfix"></div>
@@ -70,7 +75,7 @@
       <div class="preferences_btngroup">
 
           <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotonext()">Skip</button></div>
+          <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
           <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotonext()">Next</button></div>
           <div class="clearfix"></div>
       </div>

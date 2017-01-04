@@ -1,0 +1,69 @@
+<ion-header class="login-header ">
+  <button (click)="goback()">
+    <ion-icon name="arrow-round-back"></ion-icon>
+  </button>
+  <ion-title>Messages</ion-title>
+</ion-header>
+
+<ion-content>
+  <div class="main-wrapper">
+
+    <div class="message_list_top">
+      <div class="message_inbox"><div> Lorem Ipsum  </div></div>
+
+      <a [navPush]="messageaddpage" class="messageadd">Add</a>
+      <div class="clearfix"></div>
+    </div>
+
+ <div class="message_list_wrapper">
+
+   <h4 class="msgdatetext">12/26/2016 19:53:2</h4>
+   <div class="mailbox-controls1"> <button class="button  ion-ios-undo replybtn"> Reply</button></div>
+
+
+   <div class="msgtext1">
+
+     <span class="span1">From</span>
+     <span class="span2">Lorem Ipsum</span>
+     <div class="clearfix"></div>
+
+   </div>
+   <div class="msgtext1">
+
+     <span class="span1">Subject</span>
+     <span class="span2">Lorem Ipsum</span>
+     <div class="clearfix"></div>
+
+   </div>
+
+   <div class="msgtext2">
+
+     <span>Lorem Ipsum</span>
+
+   </div>
+
+
+
+
+   <h1>Replies:</h1>
+
+   <div class="msgtext2">
+
+     <h5><strong>Lorem Ipsum</strong> <b>12/26/2016 19:53:2</b><div class="clearfix"></div></h5>
+
+     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+
+   </div>
+   <div class="msgtext2">
+
+     <h5><strong>Lorem Ipsum</strong> <b>12/26/2016 19:53:2</b><div class="clearfix"></div></h5>
+
+     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+
+   </div>
+
+
+  </div>
+
+</div>
+</ion-content>

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController,ToastController,PopoverController } from 'ionic-angular';
 import {Http} from "@angular/http";
 import { Storage } from '@ionic/storage';
-import {ManagePreferences2Page} from '../managepreferences2/managepreferences2';
 import {BlankPage} from '../blank/blank';
+import {ManagePreferences2Page} from '../managepreferences2/managepreferences2';
 
 
 @Component({
@@ -11,6 +11,8 @@ import {BlankPage} from '../blank/blank';
   templateUrl: 'managepreferences.html'
 })
 export class ManagePreferencesPage {
+
+  public adminUrl = 'http://influxiq.com:8003/';
 
   public send_mail;
   public retail_calculator;
@@ -41,7 +43,7 @@ export class ManagePreferencesPage {
   }
 
   getUserdetails(){
-    var link = 'http://influxiq.com:8001/editdcustomerbyusername';
+    var link = this.adminUrl+'editdcustomerbyusername';
     var formdata = {username:this.username};
 
     this._http.post(link,formdata)
@@ -109,8 +111,9 @@ export class ManagePreferencesPage {
       toast.present();
     }else{
 
-      var link = 'http://influxiq.com:8001/updatecustomerformobile';
-      var formdata = {send_mail:this.send_mail,retail_calculator:this.retail_calculator,username:this.username};
+      var link = this.adminUrl+'updatecustomerformobile';
+      var formdata1 = {send_mail:this.send_mail,retail_calculator:this.retail_calculator};
+      var formdata = {arg:formdata1,username:this.username};
 
       this._http.post(link,formdata)
           .subscribe(data => {

@@ -24,36 +24,28 @@
     </div>
 
 
+    <form [formGroup]="dataForm" (ngSubmit)="gotonext(dataForm.value)">
+      <div class="block2">
 
-    <div class="block2">
-
-
-      <input type="text" placeholder="First Name" class="formbox">
-      <input type="text" placeholder="MI" class="formbox">
-      <input type="text" placeholder="Last Name" class="formbox">
-      <input type="text" placeholder="Email Address" class="formbox">
-      <input type="text" placeholder="Telephone Number" class="formbox">
-      <input type="text" placeholder="Fax" class="formbox">
-      <input type="text" placeholder="Birth Date" class="formbox">
-      <input type="text" placeholder="Social Security #" class="formbox">
-      <input type="text" placeholder="Mother's maiden name" class="formbox">
-
-
-
+        <input [formControl]="dataForm.controls['fname']" type="text" placeholder="First Name*" class="formbox">
+        <input [formControl]="dataForm.controls['mname']" type="text" placeholder="Middle Name" class="formbox">
+        <input [formControl]="dataForm.controls['lname']" type="text" placeholder="Last Name*" class="formbox">
+        <input [formControl]="dataForm.controls['email']" type="email" placeholder="Email Address*" class="formbox">
+        <input [formControl]="dataForm.controls['phone']" type="text" placeholder="Telephone Number*" class="formbox">
+        <input [formControl]="dataForm.controls['fax']" type="text" placeholder="Fax" class="formbox">
+        <input [formControl]="dataForm.controls['dob']" type="text" placeholder="Birth Date*" class="formbox">
+        <input [formControl]="dataForm.controls['social_security']" type="text" placeholder="Social Security*" class="formbox">
+        <input [formControl]="dataForm.controls['mother_maiden_name']" type="text" placeholder="Mother's maiden name" class="formbox">
 
       </div>
 
-
-
-
-    <div class="preferences_btngroup">
-
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
-      <div class="clearfix"></div>
-    </div>
-
+      <div class="preferences_btngroup">
+        <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
+        <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
+        <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
+        <div class="clearfix"></div>
+      </div>
+    </form>
   </div>
 
 
