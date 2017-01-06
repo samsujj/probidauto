@@ -10,157 +10,32 @@
 
 <ion-content>
   <div class="main-wrapper">
-
-
     <div class="message_list_top">
       <div class="message_inbox">
-    <ion-list>
-      <ion-item>
-        <ion-select>
-          <ion-option value="nes">Inbox</ion-option>
-          <ion-option value="n64">Sent</ion-option>
-          <ion-option value="ps">Draft</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-        </div>
+        <ion-list>
+          <ion-item>
+            <ion-select (ionChange)="cngMsgType($event)" placeholder="Inbox">
+              <ion-option value="1" selected="true">Inbox</ion-option>
+              <ion-option value="2">Sentbox</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>
 
-    <a [navPush]="messageaddpage" class="messageadd">Add</a>
+      <a [navPush]="messageaddpage" class="messageadd">Add</a>
       <div class="clearfix"></div>
     </div>
 
     <div class="message_list_wrapper">
-
-      <div class="message_list" (click)="goDetails()">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
+      <div class="message_list"  *ngFor="let item of fMsgList; let i = index" (click)="goDetails(item)">
+        <h1>
+          <strong>{{item.subject}}</strong>
+          <span>{{gettimestr(item)}}</span>
+          <div class="clearfix"></div>
+        </h1>
+        <h2>{{item.fromfullname}}</h2>
+        <h3>{{getBodyText(item)}}</h3>
       </div>
-      <div class="message_list">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-      <div class="message_list ">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-       <div class="message_list read">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-      <div class="message_list">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-      <div class="message_list read">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-      <div class="message_list">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-      <div class="message_list">
-      <h1>
-        <strong>What is Lorem Ipsum</strong>
-        <span>2h</span>
-
-        <div class="clearfix"></div>
-      </h1>
-
-
-        <h2>Lorem Ipsum</h2>
-
-        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-
-      </div>
-
-
 
 
     </div>

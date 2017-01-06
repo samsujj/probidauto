@@ -24,51 +24,52 @@
     </div>
 
 
+    <form [formGroup]="dataForm" (ngSubmit)="gotonext(dataForm.value)">
 
     <div class="block2">
-      <input type="text" placeholder="Other Monthly income " class="formbox doller_inputbg">
+      <input [formControl]="dataForm.controls['other_monthly_income']" type="text" placeholder="Other Monthly income " class="formbox doller_inputbg">
 
       <label> Checking Account? </label>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="ChkAcc" (click)="cngChkAcc(1)" (select)="cngChkAcc(1)" checked="{{chkChkAcc(1)}}">
         <span> Yes </span>
         <div class="clearfix"></div>
       </div>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="ChkAcc" (click)="cngChkAcc(2)" (select)="cngChkAcc(2)" checked="{{chkChkAcc(2)}}">
         <span> No</span>
         <div class="clearfix"></div>
       </div>
 
       <div class="clearfix"></div>
 
-      <input type="text" placeholder=" Current  Balance  " class="formbox doller_inputbg">
+      <input [formControl]="dataForm.controls['checking_account_balance']" type="text" placeholder=" Current  Balance  " class="formbox doller_inputbg">
 
 
       <label> Savings Account? </label>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="SbAcc" (click)="cngSbAcc(1)" (select)="cngSbAcc(1)" checked="{{chkSbAcc(1)}}">
         <span> Yes </span>
         <div class="clearfix"></div>
       </div>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="SbAcc" (click)="cngSbAcc(0)" (select)="cngSbAcc(0)" checked="{{chkSbAcc(0)}}">
         <span> No</span>
         <div class="clearfix"></div>
       </div>
 
       <div class="clearfix"></div>
 
-      <input type="text" placeholder=" Current  Balance " class="formbox doller_inputbg">
-      <input type="text" placeholder="  Bank name " class="formbox ">
-      <input type="text" placeholder=" Other Liquid assets" class="formbox doller_inputbg">
+      <input [formControl]="dataForm.controls['saving_account_balnace']" type="text" placeholder=" Current  Balance " class="formbox doller_inputbg">
+      <input [formControl]="dataForm.controls['other_bank_name']" type="text" placeholder="  Bank name " class="formbox ">
+      <input [formControl]="dataForm.controls['other_liquid_asset']" type="text" placeholder=" Other Liquid assets" class="formbox doller_inputbg">
 
-      <textarea class="formbox5" placeholder="Please list other income sources"></textarea>
-      <textarea class="formbox5" placeholder="Please list other liquid asset sources"></textarea>
+      <textarea [formControl]="dataForm.controls['other_income_source']" class="formbox5" placeholder="Please list other income sources"></textarea>
+      <textarea [formControl]="dataForm.controls['other_liquid_asset_source']" class="formbox5" placeholder="Please list other liquid asset sources"></textarea>
 
       <label><strong>Please Check</strong>  <input type="checkbox"><div class="clearfix"></div></label>
       <h6 class="h6text">I, the Applicant, certify that all of the statements in this application are true and complete and are made for the purpose of obtaining credit.</h6>
@@ -80,13 +81,13 @@
       <label> Do you Have a Co-Applicant? (co-buyer, co-signer)  </label>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="coApplicant" (click)="cngcoApplicant(1)" (select)="cngcoApplicant(1)" checked="{{chkcoApplicant(1)}}">
         <span> Yes </span>
         <div class="clearfix"></div>
       </div>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="coApplicant" (click)="cngcoApplicant(2)" (select)="cngcoApplicant(2)" checked="{{chkcoApplicant(2)}}">
         <span> No</span>
         <div class="clearfix"></div>
       </div>
@@ -97,13 +98,13 @@
       <label> Do you have a vehicle you plan to trade in?   </label>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="vehicleTrade" (click)="cngvehicleTrade(1)" (select)="cngvehicleTrade(1)" checked="{{chkvehicleTrade(1)}}">
         <span> Yes </span>
         <div class="clearfix"></div>
       </div>
 
       <div class="form3_rediodiv">
-        <input type="radio">
+        <input type="radio" name="vehicleTrade" (click)="cngvehicleTrade(2)" (select)="cngvehicleTrade(2)" checked="{{chkvehicleTrade(2)}}">
         <span> No</span>
         <div class="clearfix"></div>
       </div>
@@ -122,12 +123,12 @@
 
     <div class="preferences_btngroup">
 
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
+      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()" type="button">prev</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()" type="button">Skip</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
       <div class="clearfix"></div>
     </div>
-
+</form>
   </div>
 
 

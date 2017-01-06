@@ -27,16 +27,7 @@
 
     <div class="block2">
 
-      <textarea class="formbox_textarea" placeholder="By clicking the button below, you certify that all
-of the statements in this application are true and
-complete and are made for the purpose of obtaining
-credit.  You authorize this website to share the
-application and related information withs its lending
-partners in order to complete the processing of this
-application.  You authorize this website and its
-lending partners to retain and rely on this
-application, and obtain additional information,
-including credit reports."></textarea>
+      <textarea class="formbox_textarea" [formControl]="dataForm.controls['policy']" ></textarea>
 
 
 
@@ -72,8 +63,8 @@ including credit reports."></textarea>
 
 
     <div class="block3">
-      <button class="btn2" (click)="gotoskip()">Submit</button>
-      <button class="btn2" (click)="gotoskip()">Cancel</button>
+      <button class="btn2" (click)="gotoprev()">Prev</button>
+      <button class="btn2" (click)="gotoskip()">Finish</button>
       <div class="clearfix"></div>
     </div>
 

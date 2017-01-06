@@ -23,14 +23,12 @@
 
     </div>
 
+    <form [formGroup]="dataForm" (ngSubmit)="gotonext(dataForm.value)">
 
 
     <div class="block2">
 
-      <textarea class="formbox_textarea"></textarea>
-
-
-
+      <textarea [formControl]="dataForm.controls['comment']" class="formbox_textarea"></textarea>
 
 
     </div>
@@ -40,11 +38,13 @@
 
     <div class="preferences_btngroup">
 
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
+      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()" type="button">prev</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()" type="button">Skip</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
       <div class="clearfix"></div>
     </div>
+
+</form>
 
   </div>
 

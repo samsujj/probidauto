@@ -11,78 +11,52 @@
 <ion-content>
   <div class="main-wrapper">
     <div class="block1">
+
       <div class="logo-area">
         <img src="assets/images/slider-logo.png">
       </div>
 
-
       <h1>PREVIOUS RESIDENCE</h1>
 
-
-
-      <div class="topheading_chakeboxdiv">
+      <!--<div class="topheading_chakeboxdiv">
         <input type="checkbox">
         <span>(if less then 2 years at current residence)</span>
         <div class="clearfix"></div>
-      </div>
-
-
-
+      </div>-->
     </div>
 
-
+    <form [formGroup]="dataForm" (ngSubmit)="gotonext(dataForm.value)">
 
     <div class="block2">
 
+      <textarea [formControl]="dataForm.controls['previous_address']" placeholder="Address Line1" class="formbox2"></textarea>
+      <textarea [formControl]="dataForm.controls['previous_addressline2']" placeholder="Address Line2" class="formbox2"></textarea>
 
-      <textarea placeholder="Address Line1" class="formbox2"></textarea>
-      <textarea placeholder="Address Line2" class="formbox2"></textarea>
+      <input [formControl]="dataForm.controls['previous_city']" type="text" placeholder="City" class="formbox">
 
-      <input type="text" placeholder="City" class="formbox">
-
-
-      <select class="formbox3">
-        <option>State</option>
-        <option>State</option>
-        <option>State</option>
-
+      <select class="formbox3" [formControl]="dataForm.controls['previous_state']">
+        <option value="">Select Your State</option>
+        <option *ngFor="let item of statelist; let i = index" value="{{item.abbreviation}}">{{item.name}}</option>
       </select>
 
-      <input type="text" placeholder="Postal Code" class="formbox">
+      <input [formControl]="dataForm.controls['previous_zip']" type="text" placeholder="Postal Code" class="formbox">
 
       <label>Amount of Time at this Residence:</label>
 
-      <input type="text" placeholder="Years" class="formbox4">
-      <input type="text" placeholder="Months " class="formbox4">
+      <input [formControl]="dataForm.controls['previous_residence_year']" type="text" placeholder="Years" class="formbox4">
+      <input [formControl]="dataForm.controls['previous_residence_month']" type="text" placeholder="Months " class="formbox4">
 
       <div class="clearfix"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
 
     <div class="preferences_btngroup">
-
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
+      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()" type="button">prev</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()" type="button">Skip</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
       <div class="clearfix"></div>
     </div>
-
+  </form>
   </div>
 
 

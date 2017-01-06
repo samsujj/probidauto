@@ -9,7 +9,9 @@
   <div class="main-wrapper">
 
     <div class="message_list_top">
-      <div class="message_inbox"><div> Lorem Ipsum  </div></div>
+      <div class="message_inbox">
+        <div *ngIf="messagedetails">{{messagedetails.subject}}</div>
+      </div>
 
       <a [navPush]="messageaddpage" class="messageadd">Add</a>
       <div class="clearfix"></div>
@@ -17,50 +19,53 @@
 
  <div class="message_list_wrapper">
 
-   <h4 class="msgdatetext">12/26/2016 19:53:2</h4>
-   <div class="mailbox-controls1"> <button class="button  ion-ios-undo replybtn"> Reply</button></div>
+   <h4 class="msgdatetext" *ngIf="messagedetails">{{gettimestr(messagedetails)}}</h4>
+   <div class="mailbox-controls1"> <button class="button  ion-ios-undo replybtn" (click)="showReplybox=1"> Reply</button></div>
 
 
    <div class="msgtext1">
 
-     <span class="span1">From</span>
-     <span class="span2">Lorem Ipsum</span>
+     <span class="span1">To</span>
+     <span class="span2">{{replytoname}}</span>
      <div class="clearfix"></div>
 
    </div>
    <div class="msgtext1">
 
      <span class="span1">Subject</span>
-     <span class="span2">Lorem Ipsum</span>
+     <span class="span2" *ngIf="messagedetails">{{messagedetails.subject}}</span>
      <div class="clearfix"></div>
 
    </div>
 
    <div class="msgtext2">
 
-     <span>Lorem Ipsum</span>
+     <span *ngIf="messagedetails">{{getBodyText(messagedetails)}}</span>
 
    </div>
 
 
 
 
-   <h1>Replies:</h1>
+   <h1 *ngIf="totalreply">Replies:</h1>
 
-   <div class="msgtext2">
+   <div class="msgtext2" *ngFor="let item of replymessage; let i = index">
 
-     <h5><strong>Lorem Ipsum</strong> <b>12/26/2016 19:53:2</b><div class="clearfix"></div></h5>
+     <h5><strong>{{item.fromfullname}}</strong> <b>{{gettimestr1(item)}}</b><div class="clearfix"></div></h5>
 
-     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-
-   </div>
-   <div class="msgtext2">
-
-     <h5><strong>Lorem Ipsum</strong> <b>12/26/2016 19:53:2</b><div class="clearfix"></div></h5>
-
-     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+     <span>{{getBodyText(item)}}</span>
 
    </div>
+
+   <div class="replybox" *ngIf="showReplybox">
+
+     <form [formGroup]="dataForm" (ngSubmit)="addMessage(dataForm.value)">
+       <textarea [formControl]="dataForm.controls['msgbody']"></textarea>
+       <button class="sendbtn" type="submit">Send</button>
+     </form>
+
+   </div>
+
 
 
   </div>

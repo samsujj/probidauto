@@ -23,6 +23,7 @@
 
     </div>
 
+      <form [formGroup]="dataForm" (ngSubmit)="gotonext(dataForm.value)">
 
 
     <div class="block2">
@@ -36,22 +37,17 @@
       <label>Vehicle To Be Purchased</label>
 
 
-      <input type="text" placeholder=" Listing ID" class="formbox">
-      <input type="text" placeholder=" Location ID" class="formbox">
-      <input type="text" placeholder=" License Number" class="formbox">
-      <input type="text" placeholder=" VIN" class="formbox">
-      <input type="text" placeholder=" Mileage" class="formbox">
-      <input type="text" placeholder=" Make" class="formbox">
-      <input type="text" placeholder=" Model" class="formbox">
-      <input type="text" placeholder=" Model Year" class="formbox">
+      <input [formControl]="dataForm.controls['listing_id']" type="text" placeholder=" Listing ID" class="formbox">
+      <input [formControl]="dataForm.controls['location_id']" type="text" placeholder=" Location ID" class="formbox">
+      <input [formControl]="dataForm.controls['license_number']" type="text" placeholder=" License Number" class="formbox">
 
 <div class="block-divider"></div>
 
-      <input type="text" placeholder="Down Payment $" class="formbox">
-      <input type="text" placeholder="Total Vehicle Cost $" class="formbox">
-      <input type="text" placeholder="Payment Amount $	" class="formbox">
-      <input type="text" placeholder="Repayment Term" class="formbox">
-      <input type="text" placeholder="Months" class="formbox6">
+      <input [formControl]="dataForm.controls['loan_down_payment']" type="text" placeholder="Down Payment $" class="formbox">
+      <input [formControl]="dataForm.controls['loan_vehicle_cost']" type="text" placeholder="Total Vehicle Cost $" class="formbox">
+      <input [formControl]="dataForm.controls['loan_payment_amount']" type="text" placeholder="Payment Amount $	" class="formbox">
+      <input [formControl]="dataForm.controls['loan_repayment_term']" type="text" placeholder="Repayment Term" class="formbox">
+      <input [formControl]="dataForm.controls['loan_month']" type="text" placeholder="Months" class="formbox6">
 
 
 
@@ -64,12 +60,12 @@
 
     <div class="preferences_btngroup">
 
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoskip()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" (click)="gotoskip()">Next</button></div>
+      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()" type="button">prev</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()" type="button">Skip</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
       <div class="clearfix"></div>
     </div>
-
+</form>
   </div>
 
 

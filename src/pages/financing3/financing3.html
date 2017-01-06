@@ -38,7 +38,6 @@
       <select class="formbox3" [formControl]="dataForm.controls['state']">
         <option value="">Select Your State</option>
         <option *ngFor="let item of statelist; let i = index" value="{{item.abbreviation}}">{{item.name}}</option>
-
       </select>
 
       <input [formControl]="dataForm.controls['zip']" type="text" placeholder="Postal Code*" class="formbox">
@@ -70,8 +69,8 @@
 
       <div class="preferences_btngroup">
 
-      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()">prev</button></div>
-      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()">Skip</button></div>
+      <div class="btnwrapper"> <button class="grbtn_nextbtn pbtncon" (click)="gotoprev()" type="button">prev</button></div>
+      <div class="btnwrapper"><button class="grbtn_nextbtn sbtncon" (click)="gotoskip()" type="button">Skip</button></div>
       <div class="btnwrapper"><button class="grbtn_nextbtn nbtncon" type="submit">Next</button></div>
       <div class="clearfix"></div>
     </div>

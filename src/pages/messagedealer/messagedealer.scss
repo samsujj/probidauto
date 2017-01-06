@@ -33,9 +33,13 @@ page-messagedealer{
            h1{ margin: 0; padding: 2px 0 2px 26px; background:  url("../../assets/images/inboxicon.png") no-repeat scroll left 0px; background-size: 20px; font-family: 'Open Sans'; font-size:13px; color: #000; }
 
 
-          span{ width: 50px; display: block; float: right;   margin-left: 5px; text-align: right; }
+          span{ width: 67px; display: block; float: right;   margin-left: 5px; text-align: right; }
 
-          strong{ display: inline-block; float: left; font-size:14px;}
+          strong{ display: inline-block; float: left; font-size:14px;height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 72%;}
           }
 
        h2{  font-family: 'Open Sans';  font-size: 13px; color:#111; margin: 0; padding: 5px 0 5px 26px; font-weight: 700;}
