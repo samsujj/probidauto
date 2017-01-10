@@ -187,8 +187,8 @@ export class MessageDealerPage {
   }
 
   gettimestr(item){
-    var cdate = new Date();
-    var addtime = new Date(item.addedon);
+    var cdate:any = new Date();
+    var addtime:any = new Date(item.addedon);
     var differ = cdate-addtime;
     var timestr;
 

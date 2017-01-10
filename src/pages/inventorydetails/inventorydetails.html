@@ -1,3 +1,4 @@
+<script src="../../../../../probidhsdf/auctioininventorydetails/app.auctioininventorydetails.ts"></script>
 <ion-header class="login-header ">
   <button menuToggle="left">
     <ion-icon name="menu"></ion-icon>
@@ -11,46 +12,31 @@
 <ion-content>
   <div class="main-wrapper">
 
-    <div class="logo-area">
+      <div class="logo-area">
         <img src="assets/images/slider-logo.png">
       </div>
 
-
-
       <div class="page_slider_btnwrapper">
-
-
-
-          <a href="javascript:void(0)" class="prevbtn" (click)="prevSlide()" *ngIf="!isFirst"><img src="assets/images/prev-page.png"></a>
-
-          <a href="javascript:void(0)" class="nextbtn" (click)="nextSlide()" *ngIf="!isLast"><img src="assets/images/next-page.png"></a>
-
+          <a href="javascript:void(0)" class="prevbtn" (click)="prevSlide()"><img src="assets/images/prev-page.png"></a>
+          <a href="javascript:void(0)" class="nextbtn" (click)="nextSlide()"><img src="assets/images/next-page.png"></a>
           <div class="clearfix"></div>
-
       </div>
 
-
       <ion-slides #mySlider (ionDidChange)="onSlideChanged()">
-          <ion-slide>
+          <ion-slide *ngFor="let item of inventorymatcharr;">
               <div class="inventorymatch-detail-car-area">
 
-                  <ion-slides [options]="mySlideOptions" class="imageSlides">
+
+                  <div class="detail_bigcar">
+                      <img src="{{filesrc}}{{item.filename}}" >
+                  </div>
+                  <!--<ion-slides [options]="mySlideOptions" class="imageSlides">
                       <ion-slide>
                           <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
+                              <img src="{{filesrc}}{{item.filename}}" >
                           </div>
                       </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                  </ion-slides>
+                  </ion-slides>-->
 
                   <!--  <div class="detail_smcar">
                     <ul>
@@ -68,9 +54,8 @@
                   <div class="inventorymatch_detail_formgroup">
 
                       <div class="progress">
-                          <div class="progress-bar progress-bar-striped active" role="progressbar"
-                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                              40%
+                          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="sdfdsfsd(item.userdetails[0].inventorymatchval)">
+                              {{item.userdetails[0].inventorymatchval}}%
                           </div>
                       </div>
 
@@ -102,438 +87,120 @@
 
 
               </div>
-              <div class="inventorymatch-bottom-areadetail">
+              <div class="inventorymatch-bottom-areadetail" *ngIf="carlogolistarr && carbodystylelistarr && colorlist && carautoyearlistarr">
 
 
 
                   <table border="0">
                       <tr>
                           <th align="left" valign="middle"><strong>Details</strong></th>
-                          <th align="right" valign="middle">Glossary</th>
+                          <th align="right" valign="middle">{{getcarlogo(item)}}</th>
                       </tr>
 
 
-                      <tr>
+                      <tr *ngIf="item.doctype">
                           <td align="left" valign="middle">Doc Type </td>
-                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
+                          <td align="right" valign="middle"><label>{{item.doctype}}  <img src="assets/images/in_detailicon.png"> </label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Odometer </td>
-                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
+                      <tr *ngIf="item.model">
+                          <td align="left" valign="middle">Model </td>
+                          <td align="right" valign="middle"><label>{{item.model}}</label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Highlights   </td>
-                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
+                      <tr *ngIf="item.carautoyearlist">
+                          <td align="left" valign="middle">Year </td>
+                          <td align="right" valign="middle"><label>{{getcaryear(item)}}</label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
-                          <td align="right" valign="middle"><label> SIDE</label></td>
+                      <tr *ngIf="item.mileage">
+                          <td align="left" valign="middle">Miles </td>
+                          <td align="right" valign="middle"><label>{{item.mileage}}</label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Secondary Damage  </td>
-                          <td align="right" valign="middle">&nbsp;</td>
+                      <tr *ngIf="item.color">
+                          <td align="left" valign="middle">Color </td>
+                          <td align="right" valign="middle"><label>{{getcolor(item)}}</label></td>
                       </tr>
-
-                      <tr>
+                      <tr *ngIf="item.est_retail_value">
                           <td align="left" valign="middle">Est. Retail Value </td>
-                          <td align="right" valign="middle">&nbsp;</td>
+                          <td align="right" valign="middle"><label>{{item.est_retail_value}}  <img src="assets/images/in_detailicon.png"> </label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
+                      <tr *ngIf="item.vin">
+                          <td align="left" valign="middle">VIN </td>
+                          <td align="right" valign="middle"><label>{{item.vin}}</label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Body Style    </td>
-                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
+                      <tr *ngIf="item.carbodystylelist">
+                          <td align="left" valign="middle">Body Style </td>
+                          <td align="right" valign="middle"><label>{{getbodystyle(item)}}</label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Color   </td>
-                          <td align="right" valign="middle"><label> TAN</label></td>
+                      <tr *ngIf="item.enginetype">
+                          <td align="left" valign="middle">Engine Type </td>
+                          <td align="right" valign="middle"><label>{{item.enginetype}}</label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
+                      <tr *ngIf="item.drive">
+                          <td align="left" valign="middle">Drive </td>
+                          <td align="right" valign="middle"><label>{{item.drive}}</label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Drive   </td>
-                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
+                      <tr *ngIf="item.cylinder">
+                          <td align="left" valign="middle">Cylinder </td>
+                          <td align="right" valign="middle"><label>{{item.cylinder}}</label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Cylinder   </td>
-                          <td align="right" valign="middle"><label> 6</label></td>
+                      <tr *ngIf="item.fuel">
+                          <td align="left" valign="middle">Fuel </td>
+                          <td align="right" valign="middle"><label>{{item.fuel}}</label></td>
                       </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Fuel     </td>
-                          <td align="right" valign="middle"><label> GAS</label></td>
+                      <tr *ngIf="item.airbags">
+                          <td align="left" valign="middle">Airbags </td>
+                          <td align="right" valign="middle"><label>{{item.airbags}}</label></td>
                       </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Keys     </td>
-                          <td align="right" valign="middle"><label> YES</label></td>
+                      <tr *ngIf="item.stereo_system">
+                          <td align="left" valign="middle">Stereo System </td>
+                          <td align="right" valign="middle"><label>{{item.stereo_system}}</label></td>
                       </tr>
-
-                      <tr>
+                      <tr *ngIf="item.dvd_player">
+                          <td align="left" valign="middle">DVD Player </td>
+                          <td align="right" valign="middle"><label>{{item.dvd_player}}</label></td>
+                      </tr>
+                      <tr *ngIf="item.power_window">
+                          <td align="left" valign="middle">Power Window </td>
+                          <td align="right" valign="middle"><label>{{item.power_window}}</label></td>
+                      </tr>
+                      <tr *ngIf="item.power_locks">
+                          <td align="left" valign="middle">Power Lock </td>
+                          <td align="right" valign="middle"><label>{{item.power_locks}}</label></td>
+                      </tr>
+                      <tr *ngIf="item.digital_display">
+                          <td align="left" valign="middle">Digital Dispaly </td>
+                          <td align="right" valign="middle"><label>{{item.digital_display}}</label></td>
+                      </tr>
+                      <tr *ngIf="item.gear_type">
+                          <td align="left" valign="middle">Gear type </td>
+                          <td align="right" valign="middle"><label>{{item.gear_type}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.bluetooth">
+                          <td align="left" valign="middle">Bluetooth </td>
+                          <td align="right" valign="middle"><label>{{item.bluetooth}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.gps">
+                          <td align="left" valign="middle">GPS </td>
+                          <td align="right" valign="middle"><label>{{item.gps}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.seats">
+                          <td align="left" valign="middle">Seats </td>
+                          <td align="right" valign="middle"><label>{{item.seats}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.lights">
+                          <td align="left" valign="middle">Lights </td>
+                          <td align="right" valign="middle"><label>{{item.lights}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.trinted_window">
+                          <td align="left" valign="middle">Tinted Window </td>
+                          <td align="right" valign="middle"><label>{{item.trinted_window}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.sunroof">
+                          <td align="left" valign="middle">Sunroofs </td>
+                          <td align="right" valign="middle"><label>{{item.sunroof}}  <img src="assets/images/in_detailicon.png"> </label></td>
+                      </tr>
+                      <tr *ngIf="item.notes">
                           <td align="left" valign="middle">Notes </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                  </table>
-
-
-
-
-
-              </div>
-          </ion-slide>
-          <ion-slide>
-              <div class="inventorymatch-detail-car-area">
-
-                  <ion-slides [options]="mySlideOptions" class="imageSlides">
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                  </ion-slides>
-
-                  <!--  <div class="detail_smcar">
-                    <ul>
-                     <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
-                     <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
-                      <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
-                       <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
-                        <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
-                            </ul>
-                              <div class="clearfix"></div>
-
-                    </div>-->
-
-
-                  <div class="inventorymatch_detail_formgroup">
-
-                      <div class="progress">
-                          <div class="progress-bar progress-bar-striped active" role="progressbar"
-                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                              40%
-                          </div>
-                      </div>
-
-
-                      <!-- <ion-item>
-                           <ion-label>Want to participate?</ion-label>
-                           <ion-select [(ngModel)]="participate">
-                               <ion-option value="y" selected="true">Yes</ion-option>
-                               <ion-option value="n">No</ion-option>
-                           </ion-select>
-                       </ion-item>
-
-                       <div class="ion-setbox">
-                           <ion-label color="primary">Set your max bid</ion-label>
-                           <ion-input placeholder="Text Input"></ion-input>
-                           <button>Set</button>
-                       </div>
-
-                       <div class="ion-setbox-bottom">
-                        <h2>Suggested Max Bid $ 20,000 </h2>
-
-                       <img src="assets/images/inven_img2.jpg">
-
-                        <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
-                       </div>-->
-
-
-                  </div>
-
-
-              </div>
-              <div class="inventorymatch-bottom-areadetail">
-
-
-
-                  <table border="0">
-                      <tr>
-                          <th align="left" valign="middle"><strong>Details</strong></th>
-                          <th align="right" valign="middle">Glossary</th>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Doc Type </td>
-                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Odometer </td>
-                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Highlights   </td>
-                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
-                          <td align="right" valign="middle"><label> SIDE</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Secondary Damage  </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Est. Retail Value </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Body Style    </td>
-                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Color   </td>
-                          <td align="right" valign="middle"><label> TAN</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Drive   </td>
-                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Cylinder   </td>
-                          <td align="right" valign="middle"><label> 6</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Fuel     </td>
-                          <td align="right" valign="middle"><label> GAS</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Keys     </td>
-                          <td align="right" valign="middle"><label> YES</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Notes </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                  </table>
-
-
-
-
-
-              </div>
-          </ion-slide>
-          <ion-slide>
-              <div class="inventorymatch-detail-car-area">
-
-                  <ion-slides [options]="mySlideOptions" class="imageSlides">
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                      <ion-slide>
-                          <div class="detail_bigcar">
-                              <img src="assets/images/Inventory-detail_bigcar.png" >
-                          </div>
-                      </ion-slide>
-                  </ion-slides>
-
-                  <!--  <div class="detail_smcar">
-                    <ul>
-                     <li><img src="assets/images/Inventory-detail_smcar1.png"></li>
-                     <li> <img src="assets/images/Inventory-detail_smcar2.png"></li>
-                      <li> <img src="assets/images/Inventory-detail_smcar3.png"></li>
-                       <li> <img src="assets/images/Inventory-detail_smcar4.png"></li>
-                        <li> <img src="assets/images/Inventory-detail_smcar5.png"></li>
-                            </ul>
-                              <div class="clearfix"></div>
-
-                    </div>-->
-
-
-                  <div class="inventorymatch_detail_formgroup">
-
-                      <div class="progress">
-                          <div class="progress-bar progress-bar-striped active" role="progressbar"
-                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                              40%
-                          </div>
-                      </div>
-
-
-                      <!-- <ion-item>
-                           <ion-label>Want to participate?</ion-label>
-                           <ion-select [(ngModel)]="participate">
-                               <ion-option value="y" selected="true">Yes</ion-option>
-                               <ion-option value="n">No</ion-option>
-                           </ion-select>
-                       </ion-item>
-
-                       <div class="ion-setbox">
-                           <ion-label color="primary">Set your max bid</ion-label>
-                           <ion-input placeholder="Text Input"></ion-input>
-                           <button>Set</button>
-                       </div>
-
-                       <div class="ion-setbox-bottom">
-                        <h2>Suggested Max Bid $ 20,000 </h2>
-
-                       <img src="assets/images/inven_img2.jpg">
-
-                        <button> <img src="assets/images/Inventory-btnicon.png"> RSVP to commit on this car</button>
-                       </div>-->
-
-
-                  </div>
-
-
-              </div>
-              <div class="inventorymatch-bottom-areadetail">
-
-
-
-                  <table border="0">
-                      <tr>
-                          <th align="left" valign="middle"><strong>Details</strong></th>
-                          <th align="right" valign="middle">Glossary</th>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Doc Type </td>
-                          <td align="right" valign="middle"><label> TX-STORAGE LIEN PAPERS  <img src="assets/images/in_detailicon.png"> </label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Odometer </td>
-                          <td align="right" valign="middle"><label>  126,593 mi. (EXEMPT)  <img src="assets/images/in_detailicon.png">  </label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Highlights   </td>
-                          <td align="right" valign="middle"><label> Run and Drive  <img src="assets/images/in_detailicon.png"> </label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Primary Damage  <img src="assets/images/matchactive.png">   </td>
-                          <td align="right" valign="middle"><label> SIDE</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Secondary Damage  </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Est. Retail Value </td>
-                          <td align="right" valign="middle">&nbsp;</td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">VIN   <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 1G4HR52K4WH487553</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Body Style    </td>
-                          <td align="right" valign="middle"><label>SEDAN 4DR</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Color   </td>
-                          <td align="right" valign="middle"><label> TAN</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Engine Type  <img src="assets/images/matchactive.png"> </td>
-                          <td align="right" valign="middle"><label> 3.8L 6</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Drive   </td>
-                          <td align="right" valign="middle"><label> FRONT-WHEEL DRIVE</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Cylinder   </td>
-                          <td align="right" valign="middle"><label> 6</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Fuel     </td>
-                          <td align="right" valign="middle"><label> GAS</label></td>
-                      </tr>
-
-
-                      <tr>
-                          <td align="left" valign="middle">Keys     </td>
-                          <td align="right" valign="middle"><label> YES</label></td>
-                      </tr>
-
-                      <tr>
-                          <td align="left" valign="middle">Notes </td>
-                          <td align="right" valign="middle">&nbsp;</td>
+                          <td align="right" valign="middle"><label>{{item.notes}}  <img src="assets/images/in_detailicon.png"> </label></td>
                       </tr>
 
                   </table>

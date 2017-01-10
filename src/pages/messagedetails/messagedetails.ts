@@ -35,12 +35,14 @@ export class MessageDetailsPage {
   public replytoid;
   public replytoname;
 
+  public showReplybox:number;
+
   public messageaddpage=MessageAddPage;
 
   constructor(public navCtrl: NavController,public navparam: NavParams,public toastCtrl: ToastController,public popoverCtrl: PopoverController,private _http: Http, public storage: Storage,public fb: FormBuilder) {
 
     this.msgid = this.navparam.get('id');
-    console.log(this.msgid);
+    this.showReplybox = 0;
 
     this.storage.get('userdetails').then((value) => {
       if(value!=null) {
@@ -216,13 +218,13 @@ export class MessageDetailsPage {
   }
 
   gettimestr(item){
-    var addtime = new Date(item.addedon);
-    var timestr;
+    var addtime:any = new Date(item.addedon);
+    var timestr:any;
 
-    var mon = addtime.getMonth();
+    var mon:any = addtime.getMonth();
     mon = mon+1;
-    var hours = addtime.getHours();
-    var meridian = 'am';
+    var hours:any = addtime.getHours();
+    var meridian:any = 'am';
     if(hours >= 12){
       meridian = 'pm';
     }
@@ -242,12 +244,12 @@ export class MessageDetailsPage {
   }
 
   gettimestr1(item){
-    var cdate = new Date();
-    var addtime = new Date(item.addedon);
+    var cdate:any = new Date();
+    var addtime:any = new Date(item.addedon);
     var differ = cdate-addtime;
     var timestr;
 
-    var monstr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var monstr:any = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 
     //return d.getDate();

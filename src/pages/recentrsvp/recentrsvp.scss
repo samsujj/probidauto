@@ -88,22 +88,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
 	  h2{ display:block; text-align:center; margin:0 auto; background:#fb4a32; border:solid 1px #c01a04; width:250px; padding:15px 5px; font-size:15px; color:#ffffff; font-family: 'Open Sans'; font-weight:800;}
 	  
 	  img{ width:70px; display:block; margin:15px auto;}
-	  
-	  
-	button{ width:254x; margin:0 auto; background: rgba(52,200,52,1);
-background: -moz-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(52,200,52,1)), color-stop(50%, rgba(55,174,65,1)), color-stop(51%, rgba(14,153,30,1)), color-stop(100%, rgba(16,131,41,1)));
-background: -webkit-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
-background: -o-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
-background: -ms-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
-background: linear-gradient(to bottom, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', endColorstr='#108329', GradientType=0 );  font-size:14px; color:#fff; font-family: 'Open Sans'; display: block; height: 40px; line-height: 40px; text-align: left; font-weight: 700;
 
+        button{
+          width:254x;
+          margin:0 auto;
+          background: rgba(52,200,52,1);
+          background: -moz-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
+          background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(52,200,52,1)), color-stop(50%, rgba(55,174,65,1)), color-stop(51%, rgba(14,153,30,1)), color-stop(100%, rgba(16,131,41,1)));
+          background: -webkit-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
+          background: -o-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
+          background: -ms-linear-gradient(top, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
+          background: linear-gradient(to bottom, rgba(52,200,52,1) 0%, rgba(55,174,65,1) 50%, rgba(14,153,30,1) 51%, rgba(16,131,41,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', endColorstr='#108329', GradientType=0 );
+          font-size:14px;
+          color:#fff;
+          font-family: 'Open Sans';
+          display: block;
+          height: 40px;
+          line-height: 40px;
+          text-align: left;
+          font-weight: 700;
 
-        img{ width:30px; display: inline; margin: 10px 6px 0 0; float: left;}
+          img{ width:30px; display: inline; margin: 10px 6px 0 0; float: left;}
 
+        }
 
-    }
+        .commitbtn{
+
+          background-color: rgba(91,92,92,1);
+          background: @include filter-gradient(#5b5c5c, #434545, vertical);
+          background: @include background-image(linear-gradient(top, rgba(91,92,92,1) 0%, rgba(110,115,115,1) 50%, rgba(85,86,86,1) 51%, rgba(66,69,69,1) 71%, rgba(67,69,69,1) 100%));
+        }
 
  }
 	  
@@ -216,4 +231,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
 
   .nextbtn{ float: right;}
 
+}
+
+
+
+.commitMsg{
+  .toast-wrapper{
+    width: 93%;
+    border-radius: 3px;
+
+    .toast-message{
+      text-align: center;
+    }
+
+  }
 }

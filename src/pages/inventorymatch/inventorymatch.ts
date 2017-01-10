@@ -35,7 +35,6 @@ export class InventoryMatchPage {
   public details;
   public filesrc;
   public rsvplist;
-  public filesrc;
 
   public carlogolist;
   public carautoyearlist;
@@ -44,7 +43,6 @@ export class InventoryMatchPage {
 
 
 
-  public inventorydetailspage = InventoryDetailsPage;
 
   constructor(public navCtrl: NavController,public toastCtrl: ToastController,public popoverCtrl: PopoverController, public storage: Storage,private _http: Http) {
     this.hideFirst = 'hide';
@@ -378,5 +376,8 @@ export class InventoryMatchPage {
     return 'N/A';
   }
 
+  viewCardet(carIn){
+    this.navCtrl.push(InventoryDetailsPage,{'inventorymatcharr':this.inventorymatcharr,'index':carIn});
+  }
 
 }
