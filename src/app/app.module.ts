@@ -45,6 +45,7 @@ import { ManagePreferences11Page } from '../pages/managepreferences11/managepref
 import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
 import { MessageAddPage } from '../pages/messageadd/messageadd';
 import { MessageDetailsPage } from '../pages/messagedetails/messagedetails';
+import { AuctionDetailsPage } from '../pages/auctiondetails/auctiondetails';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { MessageDetailsPage } from '../pages/messagedetails/messagedetails';
     ManagePreferences11Page,
     RecentRsvpPage,
     MessageAddPage,
+    AuctionDetailsPage,
     MessageDetailsPage
   ],
   imports: [
@@ -141,6 +143,7 @@ import { MessageDetailsPage } from '../pages/messagedetails/messagedetails';
     ManagePreferences11Page,
     RecentRsvpPage,
     MessageAddPage,
+    AuctionDetailsPage,
     MessageDetailsPage
   ],
   providers: [Storage]

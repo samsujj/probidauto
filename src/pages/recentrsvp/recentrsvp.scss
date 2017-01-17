@@ -6,6 +6,18 @@ page-recentrsvp{
   .content-md {
     background: #fb4a32;
 
+    .page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
+
+      a{ display:block; width: 32px;}
+
+      img{ width: 100%;}
+
+      .prevbtn{ float: left;}
+
+      .nextbtn{ float: right;}
+
+    }
+
     .clearfix{ clear:both;}
 
     .logo-area{
@@ -113,12 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
 
         }
 
-        .commitbtn{
 
-          background-color: rgba(91,92,92,1);
-          background: @include filter-gradient(#5b5c5c, #434545, vertical);
-          background: @include background-image(linear-gradient(top, rgba(91,92,92,1) 0%, rgba(110,115,115,1) 50%, rgba(85,86,86,1) 51%, rgba(66,69,69,1) 71%, rgba(67,69,69,1) 100%));
-        }
 
  }
 	  
@@ -221,17 +228,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
 }
 
 
-.page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
 
- a{ display:block; width: 32px;}
-
-  img{ width: 100%;}
-
-  .prevbtn{ float: left;}
-
-  .nextbtn{ float: right;}
-
-}
 
 
 

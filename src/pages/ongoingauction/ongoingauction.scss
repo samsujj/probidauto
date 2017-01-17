@@ -1,11 +1,186 @@
 
 page-ongoingauction{
-  background: #303030;
+  background: #272727;
 
   .content-md {
-    background: #303030;
+    background: #272727;
+
+    .main-wrapper{
+      font-family: Arial;
 
 
+
+      .logoblock{
+        background: #FB4C34;
+        .logo-area{
+          width: 65%;
+          margin: 0 auto;
+        }
+
+        .page_slider_btnwrapper{ width: 88%; margin: 0 auto;
+
+          a{ display:block; width: 32px;}
+
+          img{ width: 100%;}
+
+          .prevbtn{ float: left;}
+
+          .nextbtn{ float: right;}
+
+        }
+      }
+
+
+
+
+      .block1{
+        padding: 10px 10px 20px;
+        background: #FB4C34;
+
+
+
+
+        .auction-area{
+          display: block;
+          margin: 10px 0;
+          .auction-left-area{
+            float: left;
+            width: 50%;
+            text-align: right;
+            background: #ffffff;
+            img{
+              width: 100%;
+              max-width: 200px;
+            }
+          }
+          .auction-right-area{
+            float: right;
+            width: 50%;
+            text-align: left;
+            padding-left: 10px;
+            h1{
+              text-transform: uppercase;
+              color: #ffffff;
+              font-size:18px;
+              text-align: left;
+              font-weight: bold; margin: 0px; padding-bottom: 0px;
+
+            }
+            h2{
+              text-transform: uppercase;
+              color: #ffffff;
+              font-size:15px;
+              text-align: left;
+              font-weight: bold; margin: 0px; padding-bottom: 0px;
+
+            }
+          }
+        }
+
+
+        .carimgarea{
+          text-align: center;
+          img{
+            border: 3px solid #ffffff;
+            margin: 10px 0;
+          }
+        }
+
+
+      }
+
+      .block2{
+        padding: 15px;
+        .area1{
+          color: #ffffff;
+          text-transform: uppercase;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+
+        .bid-area{
+          background: #000000;
+          color: #57BC21;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+          font-size: 26px;
+          padding: 15px 0;
+          margin-bottom: 15px;
+        }
+
+        .bid-area2{
+          margin-top: 0;
+          margin-bottom: 15px;
+
+          .bid-sub-area1{
+            color: #fc4b34;
+            float: left;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0;
+            margin: 0;
+            text-transform: uppercase;
+            span{
+              color: #828282;
+              font-size: 14px;
+              font-weight: normal;
+            }
+          }
+          .bid-sub-area2{
+            float: right;
+            color: #C4C4C4;
+            margin: 0;
+            margin-right: 10px;
+          }
+          .bid-sub-area3{
+            float: right;
+            color: #C4C4C4;
+            margin: 0;
+          }
+        }
+
+        .area3{
+          background: #393939;
+          margin: 15px 0;
+          padding: 15px;
+          color: #ffffff;
+          text-transform: uppercase;
+          font-size: 25px;
+        }
+
+        .btnarea{
+          .btnn{
+            width: 49%;
+            color: #ffffff;
+            padding: 15px 0;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+
+            background: rgba(250,75,52,1);
+            background: -moz-linear-gradient(top, rgba(250,75,52,1) 0%, rgba(183,38,13,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,75,52,1)), color-stop(100%, rgba(183,38,13,1)));
+            background: -webkit-linear-gradient(top, rgba(250,75,52,1) 0%, rgba(183,38,13,1) 100%);
+            background: -o-linear-gradient(top, rgba(250,75,52,1) 0%, rgba(183,38,13,1) 100%);
+            background: -ms-linear-gradient(top, rgba(250,75,52,1) 0%, rgba(183,38,13,1) 100%);
+            background: linear-gradient(to bottom, rgba(250,75,52,1) 0%, rgba(183,38,13,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa4b34', endColorstr='#b7260d', GradientType=0 );
+
+          }
+
+          .btn1{
+            float: left;
+          }
+          .btn2{
+            float: right;
+          }
+
+        }
+
+      }
+
+    }
 
   }
 }

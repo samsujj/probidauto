@@ -11,6 +11,7 @@ import { ManagePreferencesPage } from '../pages/managepreferences/managepreferen
 import { FinancingPage } from '../pages/financing/financing';
 import { RecentRsvpPage } from '../pages/recentrsvp/recentrsvp';
 import { MessageDealerPage } from '../pages/messagedealer/messagedealer';
+import { OnGoingauctionPage } from '../pages/ongoingauction/ongoingauction';
 
 
 @Component({
@@ -45,6 +46,7 @@ export class MyApp {
       {title: 'Inventory Match', class : InventoryMatchPage},
       {title: 'Message Your Dealer', class : MessageDealerPage},
       {title: 'Recent RSVP', class : RecentRsvpPage},
+      {title: 'Ongoing Auction', class : OnGoingauctionPage},
       {title: 'Manage Prefernces', class : ManagePreferencesPage},
       {title: 'Financing', class : FinancingPage},
       {title: 'Log Out', class : LogOutPage}

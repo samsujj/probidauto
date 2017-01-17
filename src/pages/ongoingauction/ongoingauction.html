@@ -2,7 +2,7 @@
   <button menuToggle="left">
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Home</ion-title>
+  <ion-title>Ongoing Auction</ion-title>
   <button class="right-btn">
     <ion-icon name="more"></ion-icon>
   </button>
@@ -11,7 +11,67 @@
 <ion-content>
   <div class="main-wrapper">
 
-    Ongoing Auction
+    <div class="logoblock">
+      <div class="logo-area">
+        <img src="assets/images/slider-logo.png">
+      </div>
+      <div class="page_slider_btnwrapper">
+
+        <a href="javascript:void(0)" class="prevbtn" (click)="prevSlide()"><img src="assets/images/prev-page.png"></a>
+
+        <a href="javascript:void(0)" class="nextbtn" (click)="nextSlide()"><img src="assets/images/next-page.png"></a>
+
+        <div class="clearfix"></div>
+
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <div style="clear: both;"></div>
+
+
+
+    <ion-slides #mySlider>
+      <ion-slide *ngFor="let itemrsvpcar of rsvplistarr">
+        <div class="block1">
+          <div class="auction-area">
+            <div class="auction-left-area">
+              <img src="{{getcardetails(itemrsvpcar.inventoryid,'auctionimage')}}">
+            </div>
+            <div class="auction-right-area">
+              <h1>{{getcardetails(itemrsvpcar.inventoryid,'auctionname')}} </h1>
+              <h2>{{getcardetails(itemrsvpcar.inventoryid,'make')}} / {{getcardetails(itemrsvpcar.inventoryid,'model')}}</h2>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="carimgarea">
+            <img src="{{getcardetails(itemrsvpcar.inventoryid,'image')}}">
+          </div>
+          <div style="clear: both;"></div>
+
+        </div>
+        <div class="block2">
+          <h2 class="area1">Bidding ends at: 12-07-2015 06:45PM</h2>
+          <div class="bid-area">
+            asking bid $15426
+          </div>
+          <div class="bid-area2">
+            <h3 class="bid-sub-area1">Last Bid <span>&gt;&gt;</span></h3>
+            <h3 class="bid-sub-area3">$25000</h3>
+            <h3 class="bid-sub-area2">John Doe</h3>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="area3">
+            Run #122<br>
+            2007 Lorem ipsum is simply dummy test
+          </div>
+          <div class="btnarea">
+            <button class="btnn btn1" (click)="bidnow(itemrsvpcar.inventoryid)">Bid Now</button>
+            <button class="btnn btn2">Add to watch list</button>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+      </ion-slide>
+    </ion-slides>
 
   </div>
 

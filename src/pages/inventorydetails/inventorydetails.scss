@@ -8,6 +8,19 @@ page-inventorydetails{
 
     .clearfix{ clear:both;}
 
+
+    .page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
+
+      a{ display:block; width: 32px;}
+
+      img{ width: 100%;}
+
+      .prevbtn{ float: left;}
+
+      .nextbtn{ float: right;}
+
+    }
+
     .logo-area{
       width: 55%;
       margin: 40px auto;
@@ -213,15 +226,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34c834', end
 
 }
 
-
-.page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
-
-  a{ display:block; width: 32px;}
-
-  img{ width: 100%;}
-
-  .prevbtn{ float: left;}
-
-  .nextbtn{ float: right;}
-
-}

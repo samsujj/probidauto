@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController,ToastController,PopoverController,NavParams } from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators,FormControl} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Http} from "@angular/http";
 import { Storage } from '@ionic/storage';
 import {BlankPage} from '../blank/blank';

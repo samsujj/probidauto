@@ -9,6 +9,18 @@ page-inventorymatch{
   .content-md {
     background: #fb4a32;
 
+    .page_slider_btnwrapper{ width: 88%; margin: 0 auto; margin-top: -35px; margin-bottom: 5px;
+
+      a{ display:block; width: 32px;}
+
+      img{ width: 100%;}
+
+      .prevbtn{ float: left;}
+
+      .nextbtn{ float: right;}
+
+    }
+
 .clearfix{ clear:both;}
 
  .logo-area{

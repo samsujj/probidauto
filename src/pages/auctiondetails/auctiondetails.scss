@@ -1,0 +1,247 @@
+
+page-auctiondetails{
+  background: #272727;
+
+  .content-md {
+    background: #272727;
+
+    .main-wrapper{
+      font-family: Arial;
+      .block1{
+        padding: 20px 10px;
+        background: #FB4C34;
+
+
+        .logo-area{
+          width: 65%;
+          margin: 0 auto;
+        }
+
+        .auction-area{
+          display: block;
+          margin: 10px 0;
+          .auction-left-area{
+            float: left;
+            width: 50%;
+            text-align: right;
+            padding-right: 10px;
+            img{
+              width: 100%;
+              max-width: 200px;
+            }
+          }
+          .auction-right-area{
+            float: right;
+            width: 50%;
+            text-align: left;
+            h1{
+              text-transform: uppercase;
+              color: #ffffff;
+              font-size:18px;
+              text-align: left;
+              font-weight: bold; margin: 0px; padding-bottom: 0px;
+
+            }h2{
+               text-transform: uppercase;
+               color: #ffffff;
+               font-size:15px;
+               text-align: left;
+               font-weight: bold; margin: 0px; padding-bottom: 0px;
+
+             }
+          }
+        }
+
+
+        .carimgarea{
+          text-align: center;
+          img{
+            border: 3px solid #ffffff;
+            margin: 10px 0;
+          }
+        }
+
+        .inventorymatch-color-area{
+          width:228px;
+          text-align:center;
+          margin:0 auto;
+          margin-bottom:40px;
+
+          span{
+            border:solid 4px #fff;
+            width:60px;
+            height:60px;
+            margin:0 8px;
+            display:block;
+            float:left;
+          }
+
+          .span1{
+            background: rgba(11,121,238,1);
+            background: -moz-linear-gradient(-45deg, rgba(11,121,238,1) 0%, rgba(62,149,241,1) 50%, rgba(0,115,237,1) 51%, rgba(0,115,237,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(11,121,238,1)), color-stop(50%, rgba(62,149,241,1)), color-stop(51%, rgba(0,115,237,1)), color-stop(100%, rgba(0,115,237,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(11,121,238,1) 0%, rgba(62,149,241,1) 50%, rgba(0,115,237,1) 51%, rgba(0,115,237,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(11,121,238,1) 0%, rgba(62,149,241,1) 50%, rgba(0,115,237,1) 51%, rgba(0,115,237,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(11,121,238,1) 0%, rgba(62,149,241,1) 50%, rgba(0,115,237,1) 51%, rgba(0,115,237,1) 100%);
+            background: linear-gradient(135deg, rgba(11,121,238,1) 0%, rgba(62,149,241,1) 50%, rgba(0,115,237,1) 51%, rgba(0,115,237,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b79ee', endColorstr='#0073ed', GradientType=1 );
+          }
+
+          .span2{
+            background: rgba(57,174,31,1);
+            background: -moz-linear-gradient(-45deg, rgba(57,174,31,1) 0%, rgba(99,191,79,1) 50%, rgba(48,170,21,1) 51%, rgba(48,170,21,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(57,174,31,1)), color-stop(50%, rgba(99,191,79,1)), color-stop(51%, rgba(48,170,21,1)), color-stop(100%, rgba(48,170,21,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(57,174,31,1) 0%, rgba(99,191,79,1) 50%, rgba(48,170,21,1) 51%, rgba(48,170,21,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(57,174,31,1) 0%, rgba(99,191,79,1) 50%, rgba(48,170,21,1) 51%, rgba(48,170,21,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(57,174,31,1) 0%, rgba(99,191,79,1) 50%, rgba(48,170,21,1) 51%, rgba(48,170,21,1) 100%);
+            background: linear-gradient(135deg, rgba(57,174,31,1) 0%, rgba(99,191,79,1) 50%, rgba(48,170,21,1) 51%, rgba(48,170,21,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39ae1f', endColorstr='#30aa15', GradientType=1 );
+          }
+
+
+          .span3{
+            background: rgba(239,18,18,1);
+            background: -moz-linear-gradient(-45deg, rgba(239,18,18,1) 0%, rgba(241,52,52,1) 50%, rgba(238,9,9,1) 51%, rgba(238,9,9,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(239,18,18,1)), color-stop(50%, rgba(241,52,52,1)), color-stop(51%, rgba(238,9,9,1)), color-stop(100%, rgba(238,9,9,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(239,18,18,1) 0%, rgba(241,52,52,1) 50%, rgba(238,9,9,1) 51%, rgba(238,9,9,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(239,18,18,1) 0%, rgba(241,52,52,1) 50%, rgba(238,9,9,1) 51%, rgba(238,9,9,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(239,18,18,1) 0%, rgba(241,52,52,1) 50%, rgba(238,9,9,1) 51%, rgba(238,9,9,1) 100%);
+            background: linear-gradient(135deg, rgba(239,18,18,1) 0%, rgba(241,52,52,1) 50%, rgba(238,9,9,1) 51%, rgba(238,9,9,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef1212', endColorstr='#ee0909', GradientType=1 );
+          }
+
+
+        }
+
+
+
+
+      }
+
+      .block2{
+        padding: 15px;
+
+        .sub-block1{
+          color: #B4B4B4;
+          font-size: 14px;
+          line-height: 22px;
+          h2{
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 26px;
+          }
+          .bidaa2{
+            text-transform: uppercase;
+            span{
+              float: right;
+              color: #F8BC00;
+            }
+          }
+        }
+
+        .sub-block2{
+          background: #393939;
+          margin: 15px 0 0;
+          padding: 10px;
+          .bidarea21{
+            width:30%;
+            float: left;
+            background: #000000;
+            color: #49C400;
+            text-transform: uppercase;
+            padding: 10px;
+            font-weight: bold;
+          }
+          .bidarea22{
+            width:70%;
+            float: left;
+            padding-left:10px;
+            .bidarea221{
+              background: #ffffff;
+              ion-input{
+                background: #ffffff;
+                float: left;
+                width: 56%;
+              }
+
+              .bitsub{
+                background: #fc4b34 none repeat scroll 0 0;
+                border: medium none;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px 0;
+                text-transform: uppercase;
+                width: 75px;
+                margin: 3px 3px 3px 0;
+                float: right;
+              }
+            }
+            .bidarea222{
+              color: #b3b3b3;
+              font-size: 12px;
+              padding-top: 5px;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+      }
+
+      .inventorymatch-bottom-areadetail{
+        background:#272727;
+        padding: 0 15px 15px;
+
+        table{ width:100%;}
+
+        th{
+          vertical-align:middle;
+          font-family: 'Open Sans';
+          background:#101010;
+          padding:8px 8px;
+          font-size:14px;
+          color:#858585;
+          text-transform:uppercase;
+          border:none; font-weight: 300;
+
+          strong{
+            font-weight:800;
+            color:#f8bd00;
+            font-size:18px;
+
+            @media screen and (max-width:440px) {
+              font-size:16px;
+            }
+          }
+        }
+
+        tr{ border-top:solid 3px #222222; border-bottom:solid 3px #222222;}
+        td{
+          vertical-align:middle;
+          font-family: 'Open Sans';
+          background:#101010;
+          padding:8px 8px;
+          font-size:16px;
+          color:#fff;
+          text-transform:uppercase;
+          border:none;
+          font-weight:300;
+
+
+          img{width: 18px; display: inline;}
+
+          label{ font-weight:800}
+
+          @media screen and (max-width:440px) {
+            font-size:13px;
+          }
+        }
+      }
+
+
+
+    }
+
+  }
+}

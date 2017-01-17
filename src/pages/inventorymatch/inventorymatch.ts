@@ -2,7 +2,6 @@ import { Component,ViewChild } from '@angular/core';
 import { NavController,ToastController,PopoverController,Slides } from 'ionic-angular';
 import {Http} from "@angular/http";
 import { Storage } from '@ionic/storage';
-import * as $ from "jquery";
 import {BlankPage} from '../blank/blank';
 import {InventoryDetailsPage} from '../inventorydetails/inventorydetails';
 

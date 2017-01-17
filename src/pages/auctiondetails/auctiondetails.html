@@ -1,0 +1,148 @@
+<ion-header class="login-header ">
+  <button menuToggle="left">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Ongoing Auction</ion-title>
+  <button class="right-btn">
+    <ion-icon name="more"></ion-icon>
+  </button>
+</ion-header>
+
+<ion-content>
+  <div class="main-wrapper">
+
+    <div class="block1">
+      <div class="logo-area">
+        <img src="assets/images/slider-logo.png">
+      </div>
+
+      <div class="auction-area">
+        <div class="auction-left-area">
+          <img src="http://probidbackend.influxiq.com/uploadedfiles/sharelinks/dealer-logo-11-1483941837850.png">
+        </div>
+        <div class="auction-right-area">
+          <h1>Auto Washinton</h1>
+          <h2>DcLane 2 8:30pm</h2>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+      <div class="carimgarea">
+        <img src="http://probidbackend.influxiq.com/uploadedfiles/sharelinks/USC60JES041D021001-1480073624283.png">
+      </div>
+      <div class="inventorymatch-color-area">
+        <span class="span1"></span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+        <div class="clearfix"></div>
+      </div>
+      <div style="clear: both;"></div>
+
+    </div>
+    <div class="block2">
+
+      <div class="sub-block1">
+        <h2>You have total 9 bids to this auction already</h2>
+        <div>Your last bid was at $5000</div>
+        <div>Current bid is $5000</div>
+        <div>Dealer retail price: $5000</div>
+        <div class="bidaa2">Bidding ends at: <span>12-07-2015 06:55PM</span></div>
+      </div>
+
+      <div class="sub-block2">
+        <div class="bidarea21">
+         Last bid $5300
+        </div>
+        <div class="bidarea22">
+          <div class="bidarea221">
+            <ion-input placeholder="Set your max bid" (keyup)="cngMaxbid($event)" type="number"></ion-input>
+            <input type="button" value="Submit" class="bitsub" (click)="setmaxbid()">
+            <div style="clear: both;"></div>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="bidarea222">Current Max Bid : {{maxbid}}</div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+    </div>
+    <div class="inventorymatch-bottom-areadetail">
+      <table border="0">
+        <tr>
+          <th align="left" valign="middle"><strong>Details</strong></th>
+          <th align="right" valign="middle">Details</th>
+        </tr>
+        <tr>
+          <td align="left" valign="middle">Doc Type </td>
+          <td align="right" valign="middle"><label>Doc Type</label></td>
+        </tr>
+        <tr>
+          <td align="left" valign="middle">Model </td>
+          <td align="right" valign="middle"><label>Model</label></td>
+        </tr>
+
+
+        <tr>
+          <td align="left" valign="middle">Retail Commission </td>
+          <td align="right" valign="middle"><label>Retail Commission USD</label></td>
+        </tr>
+
+        <tr>
+          <td align="left" valign="middle">VIN   </td>
+          <td align="right" valign="middle"><label> VIN</label></td>
+        </tr>
+
+        <tr>
+          <td align="left" valign="middle">Body Style </td>
+          <td align="right" valign="middle"><label> Body Style</label></td>
+        </tr>
+
+
+        <tr>
+          <td align="left" valign="middle">Color  </td>
+          <td align="right" valign="middle">Color</td>
+        </tr>
+
+        <tr>
+          <td align="left" valign="middle">Engine Type </td>
+          <td align="right" valign="middle">Engine Type</td>
+        </tr>
+
+        <tr>
+          <td align="left" valign="middle">Drive    </td>
+          <td align="right" valign="middle"><label> Drive</label></td>
+        </tr>
+
+        <tr>
+          <td align="left" valign="middle">Cylinder </td>
+          <td align="right" valign="middle"><label>Cylinder</label></td>
+        </tr>
+
+
+        <tr>
+          <td align="left" valign="middle">Fuel   </td>
+          <td align="right" valign="middle"><label> Fuel</label></td>
+        </tr>
+
+
+        <tr>
+          <td align="left" valign="middle">Gear type   </td>
+          <td align="right" valign="middle"><label> Gear type</label></td>
+        </tr>
+
+
+        <tr>
+          <td align="left" valign="middle">Seats   </td>
+          <td align="right" valign="middle"><label> Seats</label></td>
+        </tr>
+
+      </table>
+    </div>
+
+
+
+
+
+  </div>
+
+
+</ion-content>
